@@ -4,8 +4,6 @@ layout: page
 ---
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
-## 컴장이
-
 <h2>Skills</h2>
 
 ### Back-end
