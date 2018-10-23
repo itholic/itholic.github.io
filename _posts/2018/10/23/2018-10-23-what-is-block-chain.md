@@ -86,7 +86,7 @@ author: itholic
 어쨌든 디아블로2에서는 '조던링'이라는 반지 아이템이 '화폐'로 사용된 적이 있었다.
 
 
-![조던링](./img/jordan.png)
+![조던링](/assets/images/2018/10/23/what-is-block-chain/jordan.png)
 
 
 이미지를 보면 알 수 있듯이, 생긴것도 구리고 뭐 기능도 별거 없어보인다.
@@ -127,7 +127,7 @@ author: itholic
 
 즉, 아이템 창 전체를 가득 채운 것을 한 인벤이라고 하는데, 대략 다음과 같은 양이다. (한 인벤 = 40개)
 
-![조던한인벤](./img/jordan_inven.png)
+![조던한인벤](/assets/images/2018/10/23/what-is-block-chain/jordan_inven.png)
 
 
 엄밀히 말하면 한 인벤에서 8개가 비지만, 어쨌든 이렇게 어마어마한 양의 조던링으로 거래를 하다보니 이만저만 불편한 것이 아니었다.
