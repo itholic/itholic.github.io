@@ -5,6 +5,9 @@ tag:
 - block_chain
 category: blog
 author: itholic
+sitemap:
+  changefreq: weekly
+  priority: 1.0
 ---
 
 # 블록체인
