@@ -79,7 +79,7 @@ render를 보면 form이라는 이름으로 빈 form을 post_add.html에게 전�
 
     <div>
         <form method="POST">
-            <!-- {% csrf_token % } --> <!-- 실제 사용시에는 주석 풀고 사용-->
+            <!-- {% csrf_token %} --> <!-- 실제 사용시에는 주석 풀고 사용-->
             {{ form.as_p }}
             <button type="submit">save</button>
         </form>
