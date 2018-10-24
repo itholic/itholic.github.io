@@ -1,6 +1,6 @@
 # main text of home
-name: 컴장이
-bio: '-장이 : [접사] ‘그것과 관련된 기술을 가진 사람’의 뜻을 더하는 접미사.'
+name: 콤푸타홀릭
+bio: '-holic: ((연결형)) 「…중독자」의 뜻'
 
 # twitter summary info
 description: don't use twitter
@@ -52,8 +52,8 @@ email: haejoon309@naver.com
 
 authors:
     itholic:
-        name: 컴장이
-        bio: '-장이 : [접사] ‘그것과 관련된 기술을 가진 사람’의 뜻을 더하는 접미사.'
+        name: 콤푸타홀릭
+        bio: '-holic: ((연결형)) 「…중독자」의 뜻'
         external-image: false
         picture: assets/images/profile.jpg
 
