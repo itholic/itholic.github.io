@@ -74,12 +74,12 @@ render를 보면 form이라는 이름으로 빈 form을 post_add.html에게 전�
 이는 template에서 다음과 같이 받는다.
 
 
-```html
+```python
 <!-- ./blog/templates/blog/post_add.html -->
 
     <div>
         <form method="POST">
-            <!-- {% csrf_token %} --> <!-- 실제 사용시에는 주석 풀고 사용-->
+            {% csrf_token %}
             {{ form.as_p }}
             <button type="submit">save</button>
         </form>
@@ -94,8 +94,6 @@ form.as_p 는 폼을 p태그 안에 배치한다는 의미이다.
 이는 필드를 Wrapping할 HTML 태그를 지정해주는 것이다.
 
 그리고 csrf_token 태그를 통해 Cross Site Request Forgeries 공격에 대해 방지해준다.
-
-(장고 탬플릿 태그가 Jekyll 업로드시 인식되지 않아 주석 처리를 해놓았지만, 실제 사용할때는 주석을 해제해야한다)
 
 이는 POST, PUT, DELETE 메소드 사용시 필수로 넣어주어야한다.
 
