@@ -1,5 +1,5 @@
 ---
-titile: "[django] 장고 설치 with Virtualenv"
+title: "[django] 장고 설치 with Virtualenv"
 layout: post
 tag:
 - django

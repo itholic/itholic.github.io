@@ -1,5 +1,5 @@
 ---
-titile: "[django] 장고 디자인패턴(MTV)"
+title: "[django] 장고 디자인패턴(MTV)"
 layout: post
 tag:
 - django

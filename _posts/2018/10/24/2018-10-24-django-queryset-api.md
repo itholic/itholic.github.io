@@ -1,5 +1,5 @@
 ---
-titile: "[django] 장고 쿼리셋(QuerySet) API"
+title: "[django] 장고 쿼리셋(QuerySet) API"
 layout: post
 tag:
 - django

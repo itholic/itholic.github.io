@@ -1,5 +1,5 @@
 ---
-titile: "[django] 장고 뷰(View)"
+title: "[django] 장고 뷰(View)"
 layout: post
 tag:
 - django
