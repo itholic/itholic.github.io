@@ -74,17 +74,17 @@ render를 보면 form이라는 이름으로 빈 form을 post_add.html에게 전�
 이는 template에서 다음과 같이 받는다.
 
 
-```python
+
 <!-- ./blog/templates/blog/post_add.html -->
 
     <div>
         <form method="POST">
-            {% csrf_token %}
+            &#123; &#37; csrf_token	&#37;	 &#125;
             {{ form.as_p }}
             <button type="submit">save</button>
         </form>
    </div>
-```
+
 
 
 form.as_p 는 폼을 p태그 안에 배치한다는 의미이다.
