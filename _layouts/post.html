@@ -1,7 +1,7 @@
 ---
 layout: page
 ---
-{% include ad.html %}
+
 {% if page.image and page.headerImage %}
     <img class="title-image" src="{{ page.image }}" alt="{{ page.title }}">
 {% endif %}
@@ -22,6 +22,7 @@ layout: page
 {% endif %}
 
 {{content}}
+{% include ad.html %}
 
 {% if site.post-advance-links contains page.category %}
     <div class="blog-navigation">
