@@ -58,27 +58,7 @@ Template 변수, Template 태그, Template 필터, Template 코멘트 등으로 
 
 view에서 이름을 지정해 넘겨준 데이터를 다음과 같이 사용 가능하다.
 
-```html
-변수
-    <h3>{{ data }}</h3>
-
-태그
-    {% for item in data %}
-        <ol>
-            <li>{{ item.name }}</li>
-        </ol>
-    {% endfor %}
-
-필터
-    {{ title|upper }}
-    {{ birth_day|data:"Y-m-d" }}
-
-코멘트
-    {# one-line comment #}
-    {% multi-line comment %}
-        ...
-    {% endcomment %}
-```
+![탬플릿태그](/assets/images/2018/10/24/django_template_language.png)
 
 
 

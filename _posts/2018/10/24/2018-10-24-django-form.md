@@ -1,3 +1,4 @@
+
 ---
 titile: "[django] 장고 폼(Form)"
 layout: post
@@ -74,6 +75,9 @@ render를 보면 form이라는 이름으로 빈 form을 post_add.html에게 전�
 이는 template에서 다음과 같이 받는다.
 
 
+<<<<<<< HEAD
+![탬플릿태그](/assets/images/2018/10/24/django_form_csrf_token.png)
+=======
 
 <!-- ./blog/templates/blog/post_add.html -->
 
@@ -86,6 +90,7 @@ render를 보면 form이라는 이름으로 빈 form을 post_add.html에게 전�
    </div>
 
 
+>>>>>>> acdc68a61437557734d9c62d1a5a9eb8be22d192
 
 form.as_p 는 폼을 p태그 안에 배치한다는 의미이다.
 
