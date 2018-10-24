@@ -76,14 +76,15 @@ render를 보면 form이라는 이름으로 빈 form을 post_add.html에게 전�
 
 ```html
 <!-- ./blog/templates/blog/post_add.html -->
-
+{% \raw %}
     <div>
         <form method="POST">
-            {% \csrf_token %}
+            {% csrf_token %}
             {{ form.as_p }}
             <button type="submit">save</button>
         </form>
    </div>
+{% \endraw %}
 ```
 
 form.as_p 는 폼을 p태그 안에 배치한다는 의미이다.
