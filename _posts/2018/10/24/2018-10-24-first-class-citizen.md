@@ -1,5 +1,5 @@
 ---
-title: "1급 객체, first class citizn"
+title: "1급 객체, first class citizen"
 layout: post
 tag:
 - etc
