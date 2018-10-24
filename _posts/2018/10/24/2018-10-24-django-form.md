@@ -74,7 +74,7 @@ render를 보면 form이라는 이름으로 빈 form을 post_add.html에게 전�
 이는 template에서 다음과 같이 받는다.
 
 
-```htiml
+```html
 <!-- ./blog/templates/blog/post_add.html -->
 
     <div>
