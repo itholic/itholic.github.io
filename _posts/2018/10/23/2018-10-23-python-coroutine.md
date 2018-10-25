@@ -6,7 +6,7 @@ tag:
 category: blog
 author: itholic
 sitemap:
-  changefreq: weekly
+  changefreq: daily
   priority: 1.0
 ---
 
