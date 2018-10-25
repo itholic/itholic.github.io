@@ -1,5 +1,5 @@
 ---
-title: "Higer-Order Function(고차 함수)"
+title: "Higher-Order Function(고차 함수)"
 layout: post
 tag:
 - etc
@@ -10,13 +10,13 @@ sitemap:
   priority: 1.0
 ---
 
-# Higer-Order function (고차 함수)
+# Higher-Order function (고차 함수)
 
 Higer-Order function이란 개념을 처음 보게되었다. 이게 뭘까?
 
 찾아보니 매우 간단한 개념이었다.
 
-지난번에 정리한 First-Class citizen(일급 객체)의 특징을 상기해보자. 
+지난번에 정리한 [First-Class citizen(일급 객체)](https://itholic.github.io/first-class-citizen/)의 특징을 상기해보자. 
 
 일급 객체의 조건은 
 
