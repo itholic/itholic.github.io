@@ -2,7 +2,7 @@
 title: "[python] closure (클로저)"
 layout: post
 tag:
-- etc
+- python
 category: python
 author: itholic
 sitemap:
