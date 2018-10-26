@@ -72,7 +72,9 @@ width: normal
 # if you don't need "about" or "blog", comment them out below
 about: true
 blog: true
+
 python: true
+linux: true
 
 # if you don't need "review", comment them out below
 # review: true
