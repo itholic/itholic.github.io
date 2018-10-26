@@ -3,8 +3,7 @@ title: "[django] 장고 뷰(View)"
 layout: post
 tag:
 - django
-- python
-category: blog
+category: python
 author: itholic
 sitemap:
   changefreq: daily

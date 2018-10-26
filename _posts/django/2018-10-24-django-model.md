@@ -3,8 +3,7 @@ title: "[django] 장고 모델(Model)"
 layout: post
 tag:
 - django
-- python
-category: blog
+category: python
 author: itholic
 sitemap:
   changefreq: daily

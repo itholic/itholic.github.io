@@ -3,9 +3,7 @@ title: "[django] 장고 설치 with Virtualenv"
 layout: post
 tag:
 - django
-- python
-- virtualenv
-category: blog
+category: python
 author: itholic
 sitemap:
   changefreq: daily

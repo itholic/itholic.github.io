@@ -3,10 +3,7 @@ title: "[django] 장고 디자인패턴(MTV)"
 layout: post
 tag:
 - django
-- python
-- MTV
-- design_pattern
-category: blog
+category: python
 author: itholic
 sitemap:
   changefreq: daily
