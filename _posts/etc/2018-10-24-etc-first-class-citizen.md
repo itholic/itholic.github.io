@@ -3,7 +3,7 @@ title: "1급 객체, first class citizen"
 layout: post
 tag:
 - etc
-category: blog
+category: etc
 author: itholic
 sitemap:
   changefreq: daily

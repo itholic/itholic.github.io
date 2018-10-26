@@ -3,7 +3,7 @@ title: "Higher-Order Function(고차 함수)"
 layout: post
 tag:
 - etc
-category: blog
+category: etc
 author: itholic
 sitemap:
   changefreq: daily

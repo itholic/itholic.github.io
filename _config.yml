@@ -75,6 +75,8 @@ blog: true
 
 python: true
 linux: true
+etc: true
+database: true
 
 # if you don't need "review", comment them out below
 # review: true

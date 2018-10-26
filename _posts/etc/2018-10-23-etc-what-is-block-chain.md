@@ -2,8 +2,9 @@
 title: "블록체인이란?"
 layout: post
 tag:
+- etc
 - block_chain
-category: blog
+category: etc
 author: itholic
 sitemap:
   changefreq: daily

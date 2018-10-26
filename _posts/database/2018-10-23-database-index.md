@@ -1,9 +1,9 @@
 ---
-title: "DB 인덱스(INDEX)란?"
+title: "[database] DB 인덱스(INDEX)란?"
 layout: post
 tag:
 - database
-category: blog
+category: database
 author: itholic
 sitemap:
   changefreq: daily
