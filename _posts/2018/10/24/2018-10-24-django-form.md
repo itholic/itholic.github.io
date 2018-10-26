@@ -1,4 +1,3 @@
-
 ---
 title: "[django] 장고 폼(Form)"
 layout: post
