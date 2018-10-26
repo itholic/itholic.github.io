@@ -63,8 +63,8 @@ authors:
 width: normal
 
 # if you don't need pagination, comment the *paginate* configs below
-paginate: 5
-paginate_path: "blog/:num/"
+# paginate: 5
+# paginate_path: "blog/:num/"
 
 # if you don't need projects, comment the *projects* configs below
 # projects: true
@@ -72,6 +72,7 @@ paginate_path: "blog/:num/"
 # if you don't need "about" or "blog", comment them out below
 about: true
 blog: true
+python: true
 
 # if you don't need "review", comment them out below
 # review: true

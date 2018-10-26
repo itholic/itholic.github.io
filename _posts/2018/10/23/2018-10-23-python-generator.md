@@ -3,7 +3,7 @@ title: "[python] generator"
 layout: post
 tag:
 - python
-category: blog
+category: python
 author: itholic
 sitemap:
   changefreq: daily

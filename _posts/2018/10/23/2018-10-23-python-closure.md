@@ -1,9 +1,9 @@
 ---
-title: "closure (클로저)"
+title: "[python] closure (클로저)"
 layout: post
 tag:
 - etc
-category: blog
+category: python
 author: itholic
 sitemap:
   changefreq: daily

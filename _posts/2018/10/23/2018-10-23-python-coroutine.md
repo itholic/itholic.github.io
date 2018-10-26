@@ -3,7 +3,7 @@ title: "[python] coroutine"
 layout: post
 tag:
 - python
-category: blog
+category: python
 author: itholic
 sitemap:
   changefreq: daily

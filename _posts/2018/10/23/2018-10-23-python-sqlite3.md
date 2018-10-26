@@ -3,7 +3,7 @@ title: "[python] sqlite3"
 layout: post
 tag:
 - python
-category: blog
+category: python
 author: itholic
 sitemap:
   changefreq: daily

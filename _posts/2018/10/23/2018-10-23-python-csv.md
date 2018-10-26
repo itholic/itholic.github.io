@@ -3,7 +3,7 @@ title: "[python] csv"
 layout: post
 tag:
 - python
-category: blog
+category: python
 author: itholic
 sitemap:
   changefreq: daily
