@@ -1,5 +1,5 @@
 ---
-title: "소프트웨어 테스트 방"
+title: "소프트웨어 테스트 방법"
 layout: post
 tag:
 - etc
