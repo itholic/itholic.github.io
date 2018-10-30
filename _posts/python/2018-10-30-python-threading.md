@@ -87,7 +87,7 @@ if __name__ == "__main__":
 
 쓰레드는 다음과 같이 클래스도로 사용 가능하다.
 
-```
+```python
 #-*- coding:utf-8 -*-
 
 import threading
