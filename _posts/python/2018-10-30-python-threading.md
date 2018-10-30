@@ -20,7 +20,7 @@ thread라는 모듈도 쓰레드를 지원하지만, 이는 저수준의 라이�
 
 일반적으로 고수준의 라이브러리인 threading을 많이 사용한다.
 
-아래는 worker라는 메소드를 쓰레드를 통해 동시에 10개 실행시키는 예제이다.
+아래는 쓰레드를 통해 worker라는 메소드를 동시에 10번 실행시키는 예제이다.
 
 worker는 실행 후 5초 후에 종료된다.
 
@@ -58,7 +58,7 @@ if __name__ == "__main__":
 실행시키면 다음과 같은 결과가 나온다
 
 
-```python
+```html
 [th def 0] is start : hello 0
 [th def 1] is start : hello 1
 [th def 2] is start : hello 2
@@ -113,7 +113,7 @@ def main():
     for i in range(10):
         # threading.Thread 대신, 클래스명으로 쓰레드 객체를 생성하면 된다
         msg = "hello"
-        th = Worker(name="th cls {}".format(i), args=(msg,))
+        th = Worker(name="[th cls {}]".format(i), args=(msg,))
         th.start()  # run()에 구현한 부분이 실행된다
 
 if __name__ == "__main__":
@@ -125,27 +125,27 @@ if __name__ == "__main__":
 
 메소드로 만들었을때와 똑같다.
 
-```python
-th cls 0 is start : hello
-th cls 1 is start : hello
-th cls 2 is start : hello
-th cls 3 is start : hello
-th cls 4 is start : hello
-th cls 5 is start : hello
-th cls 6 is start : hello
-th cls 7 is start : hello
-th cls 8 is start : hello
-th cls 9 is start : hello
-th cls 0 is end
-th cls 1 is end
-th cls 2 is end
-th cls 3 is end
-th cls 6 is end
-th cls 4 is end
-th cls 5 is end
-th cls 7 is end
-th cls 9 is end
-th cls 8 is end
+```html
+[th cls 0] is start : hello
+[th cls 1] is start : hello
+[th cls 2] is start : hello
+[th cls 3] is start : hello
+[th cls 4] is start : hello
+[th cls 5] is start : hello
+[th cls 6] is start : hello
+[th cls 7] is start : hello
+[th cls 8] is start : hello
+[th cls 9] is start : hello
+[th cls 0] is end
+[th cls 1] is end
+[th cls 2] is end
+[th cls 3] is end
+[th cls 6] is end
+[th cls 4] is end
+[th cls 5] is end
+[th cls 7] is end
+[th cls 9] is end
+[th cls 8] is end
 ```
 
 ### 데몬(Daemon) 쓰레드
@@ -236,7 +236,7 @@ if __name__ == "__main__":
 
 결과를 보자
 
-```
+```html
 [Daemon] is start : hello
 [Daemon] is end
 Main Thread End
