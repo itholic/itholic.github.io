@@ -1,5 +1,5 @@
 ---
-title: "[book] 파이썬답게 코딩하기()"
+title: "[book] 파이썬답게 코딩하기 (링크 업데이트중)"
 layout: post
 tag:
 - book
