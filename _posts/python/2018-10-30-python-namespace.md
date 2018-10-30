@@ -93,7 +93,7 @@ print test()  # 101
 # -*- coding:utf-8 -*-
 
 def outter():
-	outter_int = 100
+    outter_int = 100
     
     def inner():
     	return outter_int
@@ -111,7 +111,7 @@ inner() 함수 에서 outter() 함수의 변수인 outter_int를 제대로 반�
 # -*- coding:utf-8 -*-
 
 def outter():
-	outter_int = 100
+    outter_int = 100
     
     def inner():
         outter_int += 1
@@ -138,10 +138,10 @@ outter()  # UnboundLocalError: local variable 'outter_int' referenced before ass
 # -*- coding:utf-8 -*-
 
 def outter():
-	outter_int = 100
+    outter_int = 100
     
     def inner():
-        nonlocal outter_int
+        nonlocal outter_int  # local변수가 아닌 변수 outter_int를 사용하겠습니다
         outter_int += 1
     	return outter_int
 
