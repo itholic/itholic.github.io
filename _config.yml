@@ -1,9 +1,9 @@
 # main text of home
-name: 콤푸타홀릭
-bio: '-holic: ((연결형)) 「…중독자」의 뜻'
+name: 코딩장이
+bio: '-장이: [접사] ‘그것과 관련된 기술을 가진 사람’의 뜻을 더하는 접미사.'
 
 # twitter summary info
-description: 콤푸타홀릭
+description: 코딩장이
 
 # if it's an external image, update below for true
 # better with square images
@@ -52,8 +52,8 @@ email: haejoon309@naver.com
 
 authors:
     itholic:
-        name: 콤푸타홀릭
-        bio: '-holic: ((연결형)) 「…중독자」의 뜻'
+        name: 코딩장이
+        bio: '-장이: [접사] ‘그것과 관련된 기술을 가진 사람’의 뜻을 더하는 접미사.'
         external-image: false
         picture: assets/images/profile.jpg
 
