@@ -157,7 +157,7 @@ return 1
 
 list의 값을 출력했을 때에는, 실제로 해당 list를 출력을 하든 말든 우선 값을 다 만들어놓았었다.
 
-앞선 예제에서 "return 1"이라는 출력이 "let's pring one_list" 이전에 이미 10번 수행된 것을 보면 알 수 있다.
+앞선 예제에서 "return 1"이라는 출력이 "let's print one_list" 이전에 이미 10번 수행된 것을 보면 알 수 있다.
 
 하지만 generator의 값을 출력했을 때에는, 실제로 generator의 값을 출력하는 순간에 함수에서 값을 만들고있다.
 
