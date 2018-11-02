@@ -1,4 +1,14 @@
-
+---
+title: "[python] JSON"
+layout: post
+tag:
+- python
+category: python
+author: itholic
+sitemap:
+  changefreq: daily
+  priority: 1.0
+---
 
 # json
 
