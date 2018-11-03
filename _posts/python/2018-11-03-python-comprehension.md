@@ -106,7 +106,7 @@ generator expression이라고 부르는 것 뿐이다.
 
 <br/>
 
-참고로, 같은 코드를 lambda를 활용해 작성할 수 있다.
+참고로, 같은 코드를 <a href="https://itholic.github.io/python-lambda/" target="_blank">lambda</a>를 활용해 작성할 수 있다.
 
 ```python
 doubled_list = list(map((lambda item:item*item), sample_list))
