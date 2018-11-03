@@ -40,7 +40,6 @@ comprehension을 설명하는 중간에 잠깐 언급하도록 하겠다.
 
 ```python
 sample_list = [1, 2, 3, 4, 5]
-
 ```
 
 이 리스트의 모든 요소에 2를 곱한 새로운 리스트를 생성하고 싶다.
@@ -57,9 +56,9 @@ for item in sample_list:
 
 빈 리스트를 선언하고,
 
-기존 sample_list를 iteration하며(for문을 돌며),
+sample_list를 iteration하며(for문을 돌며), 
 
-요소에 2씩 곱해서 append 해주었다.
+각 요소에 2씩 곱해서 append 해주었다.
 
 comprehension을 사용하면 다음과 같이 함축적으로 표현 가능하다
 
@@ -67,11 +66,11 @@ comprehension을 사용하면 다음과 같이 함축적으로 표현 가능하�
 doubled_list = [item*2 for item in sample_list]
 ```
 
-처음 봤을땐 "이게 뭐지?" 하겠지만,
+처음 봤을땐 너무 함축돼서 "이게 뭐지?" 하겠지만,
 
 하나하나 기존의 코드과 비교해보면 대충 어떤 규칙을 가지고있는지 감이 올것이다.
 
-for문을 돌며 하고자 하는 동작(item*2)을 먼저 기술하고, 그 뒤에 for문이 바로 따라온다.
+for문을 돌며 하고자 하는 동작(item\*2)을 먼저 기술하고, 그 뒤에 for문이 바로 따라온다.
 
 for문 다음에 개행과 indentation을 따로 신경쓸 필요도 없어서 한 줄에 깔끔하게 표현이 가능하다.
 
@@ -99,11 +98,11 @@ print(type(doubled_gen))  # <type 'generator'>
 
 그리고 이러한 방식을 generator comprehension이라고 부르지 않고,
 
-generator expression이라고 칭하는 것 뿐이다.
+generator expression이라고 부르는 것 뿐이다.
 
 따라서 'expression과 comprehension이 무슨 차이일까?' 에 관해 그렇게 깊게 생각하지 않아도 된다.
 
-다만, generator로 생성했을때는 값 호출시 <a href="https://itholic.github.io/python-lazy-evaluation/" target="_blank">Lazy Evaluation</a>으로 동작하기 때문에 이 부분을 유의하면 된다.
+다만, generator로 생성했을때는 값 호출시 <a href="https://itholic.github.io/python-lazy-evaluation/" target="_blank">Lazy Evaluation</a>으로 동작한다는 사실을 유념하면 된다.
 
 <br/>
 
@@ -143,7 +142,9 @@ my_dict = {k:v for k, v in zip(k_list, v_list)}
 ```
 
 
-참고로 zip 명령어는 두 개의 리스트를 인자로 받아서, 양쪽 리스트의 동일한 인덱스 요소를 짝지어주는 역할을 한다.
+참고로 zip 메소드는 두 개의 리스트를 인자로 받아서, 
+
+양쪽 리스트의 동일한 인덱스 요소를 짝지어주는 역할을 한다.
 
 예제를 보자.
 
@@ -174,13 +175,13 @@ zip(k_list, v_list)  # [('name', 'itholic'), ('age', 29), ('gender', 'male')]
 
 그렇다고해도 이는 어디까지나 주관적인 경험이며, 결국 본인이 편하다고 생각하는 것을 사용하면 된다.
 
-실제로 for문에서 해야하는 연산이 복잡할 경우,
+그리고 만약 for문에서 해야하는 연산이 복잡할 경우,
 
 굳이 comprehension을 사용해 한 줄에 우겨넣으려다가 오히려 가독성을 해칠수도 있다.
 
 <br/>
 
 
-다만, '알고 사용하지 않는 것'과 '몰라서 사용하지 못하는 것'은 완전히 다르기때문에,
+다만, '알지만 사용하지 않는 것'과 '몰라서 사용하지 못하는 것'은 완전히 다르기때문에,
 
-다른 사람의 코드를 읽을 경우를 대비해서라도 이런 방식에 대해 어느정도 감은 잡아두는 것이 좋다.
+다른 사람의 코드를 읽을 경우를 대비해서라도 이런 방식에 대해 어느정도 감은 잡아두는 것이 좋다고 생각한다.
