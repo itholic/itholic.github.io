@@ -76,9 +76,9 @@ testfile1  testfile2  testfile3
 
 # ls -l
 total 0
--rw-r--r-- 1 leehaejoon 197121 0 11월  6 22:08 testfile1
--rw-r--r-- 1 leehaejoon 197121 0 11월  6 22:08 testfile2
--rw-r--r-- 1 leehaejoon 197121 0 11월  6 22:08 testfile3
+-rw-r--r-- 1 itholic 197121 0 11월  6 22:08 testfile1
+-rw-r--r-- 1 itholic 197121 0 11월  6 22:08 testfile2
+-rw-r--r-- 1 itholic 197121 0 11월  6 22:08 testfile3
 
 
 # ls -a
@@ -87,11 +87,11 @@ total 0
 
 # ls -al
 total 4
-drwxr-xr-x 1 leehaejoon 197121 0 11월  6 22:08 ./
-drwxr-xr-x 1 leehaejoon 197121 0 11월  6 22:08 ../
--rw-r--r-- 1 leehaejoon 197121 0 11월  6 22:08 testfile1
--rw-r--r-- 1 leehaejoon 197121 0 11월  6 22:08 testfile2
--rw-r--r-- 1 leehaejoon 197121 0 11월  6 22:08 testfile3
+drwxr-xr-x 1 itholic 197121 0 11월  6 22:08 ./
+drwxr-xr-x 1 itholic 197121 0 11월  6 22:08 ../
+-rw-r--r-- 1 itholic 197121 0 11월  6 22:08 testfile1
+-rw-r--r-- 1 itholic 197121 0 11월  6 22:08 testfile2
+-rw-r--r-- 1 itholic 197121 0 11월  6 22:08 testfile3
 ```
 
 <br/>
@@ -231,20 +231,20 @@ testfile2
 ```
 # ls -l
 total 0
--rw-r--r-- 1 leehaejoon 197121 0 11월  6 22:08 testfile1
+-rw-r--r-- 1 itholic 197121 0 11월  6 22:08 testfile1
 
 
 # touch testfile1
 # ls -l
 total 0
--rw-r--r-- 1 leehaejoon 197121 0 11월  6 22:43 testfile1
+-rw-r--r-- 1 itholic 197121 0 11월  6 22:43 testfile1
 
 
 # touch testfile2
 # ls -l
 total 0
--rw-r--r-- 1 leehaejoon 197121 0 11월  6 22:43 testfile1
--rw-r--r-- 1 leehaejoon 197121 0 11월  6 22:44 testfile2
+-rw-r--r-- 1 itholic 197121 0 11월  6 22:43 testfile1
+-rw-r--r-- 1 itholic 197121 0 11월  6 22:44 testfile2
 ```
 
 <br/>
@@ -282,10 +282,10 @@ file1  file2  file3
 
 # cat file1 file2 > file1_2
 # ls
-file1  file12  file2  file3
+file1  file1_2  file2  file3
 
 
-# cat file12
+# cat file1_2
 1
 2
 
