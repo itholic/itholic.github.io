@@ -11,8 +11,6 @@ layout: compress
 
     <meta name=description content="{{ site.bio }}">
     <meta name=author content="{{ site.name }}">
-
-    {% include advertisements.html %}
    
     {% seo %}
     
@@ -25,6 +23,8 @@ layout: compress
     {% capture scss_sheet %}{% include style.scss %}{% endcapture %}
     {{ scss_sheet | scssify }}
     </style>
+    
+    {% include advertisements.html %}
 
 </head>
 <body>
