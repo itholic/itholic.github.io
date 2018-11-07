@@ -103,7 +103,7 @@ select모듈을 다루기 전에 I/O 멀티플렉싱이 무엇인지 간단하�
  35         client_socket.close()  # 클라이언트 소켓 종료
  36     except KeyboardInterrupt:
  37         raise KeyboardInterrupt
- 38     except:
+ 38     except socket.timeout:
  39         pass
  40
  41     try:
@@ -117,7 +117,7 @@ select모듈을 다루기 전에 I/O 멀티플렉싱이 무엇인지 간단하�
  49         client_socket.close()  # 클라이언트 소켓 종료
  50     except KeyboardInterrupt:
  51         raise KeyboardInterrupt
- 52     except:
+ 52     except socket.timeout:
  53         pass
 ```
 
@@ -133,7 +133,7 @@ select모듈을 다루기 전에 I/O 멀티플렉싱이 무엇인지 간단하�
 
 포트를 추가했으므로 해당 포트로 들어오는 클라이언트를 처리하기 위해 소켓도 추가해야한다.
 
-그래서 20~23번쨰 줄에 소켓을 하나 더 추가했다.
+그래서 20~23번째 줄에 소켓을 하나 더 추가했다.
 
 <br/>
 
@@ -249,7 +249,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client_socket:
 다음 코드를 보자.
 
 
-```
+```python
   1 #-*- coding:utf-8 -*-
   2
   3 import socket
@@ -314,7 +314,9 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client_socket:
 
 이제 앞선 예제처럼 server_socket1과 server_socket2를 번갈아가며 accept() 하지 않는다.
 
-대신 select.select()를 수행한 라인에서 read_socket_list에 포함된 소켓 중 하나가 접속할 때까지 대기한다.
+대신 select.select()를 수행한 라인에서(30번째 라인) 
+
+read_socket_list에 포함된 소켓 중 하나에 접속이 발생할 때까지 대기한다.
 
 실제로 다음과 같이 서버를 실행했을 때, 클라이언트가 접속할 때까지 아무런 일도 일어나지 않는다.
 
@@ -322,6 +324,8 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client_socket:
 # python echo_server.py
 (클라이언트 대기중)
 ```
+
+30번째 줄에서 block이 되어있는 것이다.
 
 그리고 클라이언트가 접속할 때에만 다음과 같이 각 클라이언트에 적합한 작업을 수행한다.
 
@@ -339,7 +343,7 @@ resp from server : b'welcome 5050!'
 resp from server : b'welcome 5060!'
 ```
 
-프로세스가 block이 되어있긴 하지만, 
+즉, 프로세스가 block 되어있긴 하지만, 
 
 여러 포트로의 접속을 동시에 받아들일 준비가 되어있는 상태인 것이다.
 
@@ -347,7 +351,7 @@ resp from server : b'welcome 5060!'
 
 <br/>
 
-앞선 예제와의 차이가 잘 느껴지지 않는다면 이렇게 생각하자.
+앞선 예제와의 차이가 잘 느껴지지 않는다면 이렇게 생각해보자.
 
 음식점에서 예약손님 두 테이블을 받기위해 방 2개를 준비해놓았다.
 
@@ -364,6 +368,8 @@ select를 사용한 예제의 경우에는 조금 다르다.
 두 방을 동시에 모니터링 할 수 있는 CCTV를 설치한 것이다.
 
 그래서 손님이 올 때까지만 CCTV를 보며 가만히 대기하다가, 손님이 왔을때 나가서 일을 시작한다.
+
+이 CCTV의 역할을 하는 것이 바로 select 모듈이다.
 
 <br/>
 
