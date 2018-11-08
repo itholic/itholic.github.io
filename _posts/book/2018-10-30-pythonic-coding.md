@@ -49,7 +49,7 @@ sitemap:
     - <a href="https://itholic.github.io/higer-order-function/" target="_blank">Higher-Order function</a>
     - Nested function
     - <a href="https://itholic.github.io/python-closure/" target="_blank">Closure</a>
-    - Partion Application
+    - Partial Application
 
 
 - 2장. 기본 문법
@@ -57,9 +57,9 @@ sitemap:
 	- <a href="https://itholic.github.io/python-iterable-iterator/" target="_blank">Iterator</a>
 	- <a href="https://itholic.github.io/python-generator/" target="_blank">Generator</a>
 	- Decorator
-	- Comprehension, Expression
-	- Lazy Evaluation
-	- 동등성, 동일성
+	- <a href="https://itholic.github.io/python-comprehension/" target="_blank">Comprehension, Expression</a>
+	- <a href="https://itholic.github.io/python-lazy-evaluation/" target="_blank">Lazy Evaluation</a>
+	- <a href="https://itholic.github.io/python-identity-equality/" target="_blank">동등성, 동일성</a>
 
 
 - 3장. 동시성과 병렬성
@@ -78,8 +78,8 @@ sitemap:
 
 
 - 5장. 비동기
-    - 동기, 비동기
-    - 블록, 논블록
+    - <a href="https://itholic.github.io/etc-async/" target="_blank">동기, 비동기</a>
+    - <a href="https://itholic.github.io/etc-async/" target="_blank">블록, 논블록</a>
     - concurrent.futures
     - Asyncio
 
