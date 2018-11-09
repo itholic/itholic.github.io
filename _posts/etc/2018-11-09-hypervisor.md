@@ -89,14 +89,14 @@ DOM0에서 얼마나 많은 일을 처리하느냐에 따라 크게 두 가지�
 이렇게 각기 다른 명령 방식을 해석해서 하드웨어에 전달하는 것이 바로 하이퍼바이저의 역할이다.
 
 
-<a href="https://blog.naver.com/alice_k106/220218878967">alice님의 블로그</a>에 이를 매우 잘 표현한 그림이 있어서 업어(?)왔다.
+<a href="https://blog.naver.com/alice_k106/220218878967" target="_blank">alice님의 블로그</a>에 이를 매우 잘 표현한 그림이 있어서 업어(?)왔다.
 
 ![하이퍼바이저](/assets/images/2018/11/09/full.png)
 
 
 윈도우, 리눅스, 맥에서 날아오는 각기 다른 명령을 하이퍼바이저가 해석해서 하드웨어에 전달하고있다.
 
-(Supervisor라고 쓰여져있는것은 <a href="https://blog.naver.com/alice_k106/220218878967">원문</a>에서 실수라고 언급하고 있다)
+(Supervisor라고 쓰여져있는것은 <a href="https://blog.naver.com/alice_k106/220218878967" target="_blank">원문</a>에서 실수라고 언급하고 있다)
 
 사실 이를 더 내부적으로 들여다보면, 앞서 언급했던 DOM0이 그 역할을 하고있다.
 
@@ -118,7 +118,7 @@ DOM0에서 얼마나 많은 일을 처리하느냐에 따라 크게 두 가지�
 
 이 때 쓰는 명령을 Hyper-Call이라 부른다.
 
-이 역시 <a href="https://blog.naver.com/alice_k106/220218878967">alice님의 블로그</a>에서 예시 그림을 업어왔다.
+이 역시 <a href="https://blog.naver.com/alice_k106/220218878967" target="_blank">alice님의 블로그</a>에서 예시 그림을 업어왔다.
 
 ![하이퍼바이저](/assets/images/2018/11/09/para.png)
 
