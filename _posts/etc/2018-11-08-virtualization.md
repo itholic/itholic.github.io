@@ -3,6 +3,7 @@ title: "[virtualization] 가상화란?"
 layout: post
 tag:
 - etc
+- virtualization
 category: etc
 author: itholic
 sitemap:

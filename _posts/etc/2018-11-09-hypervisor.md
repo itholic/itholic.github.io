@@ -3,6 +3,7 @@ title: "[virtualization] 하이퍼바이저, 전가상화, 반가상화"
 layout: post
 tag:
 - etc
+- virtualization
 category: etc
 author: itholic
 sitemap:
