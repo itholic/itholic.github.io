@@ -10,7 +10,7 @@ sitemap:
   priority: 1.0
 ---
 
-# Lazy Evaluation 
+# Lazy Evaluation
 
 만약 당신이 스터디룸에서 일하는 직원이다.
 
@@ -112,7 +112,7 @@ one_list를 출력하기 전에 미리 함수 10번이 실행되어 값을 다 �
 
 <br/>
 
-그럼 똑같은 상황에서 one_list를 generator로 만들어보자.
+이번에는 리스트대신 generator로 값을 생성해보자.
 
 list comprehension에서 대괄호만 소괄호로 바꾸어주면 generator expression이 된다.
 
@@ -125,19 +125,19 @@ def return_one():
     print("return 1")
     return 1
 
-print("[let's make one_list !]")
-one_list = (return_one() for x in range(10))  # 대괄호[] 를 소괄호() 로 바꿈
+print("[let's make one_generator !]")
+one_generator = (return_one() for x in range(10))  # 대괄호[] 를 소괄호() 로 바꿈
 
-print("[let's print one_list !]")
-for one in one_list:
+print("[let's print one_generator !]")
+for one in one_generator:
     print(one)
 ```
 
 실행해보자.
 
 ```
-[let's make one_list !]
-[let's print one_list !]
+[let's make one_generator !]
+[let's print one_generator !]
 return 1
 1
 return 1
@@ -162,9 +162,9 @@ return 1
 
 차이가 보이는가?
 
-[let's make one list !] 아래쪽에 아무것도 없다.
+[let's make one_generator !] 아래쪽에 아무것도 없다.
 
-즉, 미리 리스트를 만들어놓지 않았다.
+즉, 실제로 값을 출력하기 전에는 'return_one'함수가 한 번도 실행되지 않았다.
 
 <br/>
 
@@ -176,9 +176,9 @@ one_list가 실제로 사용되든 말든 우선 값을 다 만들어놓았었�
 
 <br/>
 
-하지만 이를 generator로 만들어 값을 출력했을 때에는,
+하지만 generator를 사용했을 때에는,
 
-실제로 generator의 값을 출력하는 순간에 함수에서 값을 만들고있다.
+실제로 one_generator의 값을 사용하는 순간에만 함수를 수행하고있다.
 
 즉, 값이 실제로 사용되지 않으면 연산 또한 하지 않으므로 시간과 메모리를 절약할 수 있다.
 
@@ -281,12 +281,12 @@ def return_one_after_five_sec():
     print("return 1")
     return 1
 
-print("[let's make one_list !]")
-one_list = (return_one_after_five_sec() for x in range(10))  # generator 생성
+print("[let's make one_generator !]")
+one_generator = (return_one_after_five_sec() for x in range(10))  # generator 생성
 
 # counter 숫자만큼 값 출력
-print("[let's print one_list !]")
-for item in one_list:
+print("[let's print one_generator !]")
+for item in one_generator:
     counter -= 1
     print(item)
     if counter == 0:
@@ -297,8 +297,8 @@ for item in one_list:
 
 ```
 counter: 1
-[let's make one_list !]
-[let's print one_list !]
+[let's make one_generator !]
+[let's print one_generator !]
 please wait for 5 seconds
 return 1
 1
@@ -306,9 +306,11 @@ return 1
 
 마찬가지로 counter 값은 1이 생성되었다.
 
-하지만 미리 리스트를 만들어놓지 않은 덕분에 5초만에 작업을 끝내고 프로그램이 종료되었다.
+하지만 미리 값을 만들어놓지 않은 덕분에 5초만에 작업을 끝내고 프로그램이 바로 종료되었다.
 
-미리 라면을 끓여놓지 않길 잘한것이다.
+list로 값을 만들었을때에 비해 무려 9배의 성능 향상이 발생한것이다.
+
+라면을 미리 끓여놓지 않길 잘했다.
 
 <br/>
 
