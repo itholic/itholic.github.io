@@ -19,8 +19,6 @@ javascript에서 callback은 함수를 다시 부르는 것이다.
 
 무슨말일까?
 
-javascript에서 함수는 <a href="https://itholic.github.io/etc-first-class-citizen/">일급객체</a>이므로, 함수를 또다른 함수의 인자로 넘겨주는 것이 가능하다.
-
 callback을 이해하려면 우선 비동기방식을 이해해야한다.
 
 다음 Node.js 예제를 보자.
@@ -216,3 +214,8 @@ i am sample
 readFile이 먼저 실행되고 callback함수가 그 이후에 실행된 것처럼 말이다.
 
 javascript는 싱글 스레드이며, 기본적으로 모든 함수가 비동기로 실행되기때문에 이는 아주 중요한 개념이다.
+
+<br/>
+
+참고로 함수를 또 다른 함수의 인자로 넘겨 실행할 수 있는 이유는 javascript에서 함수를 <a href="https://itholic.github.io/etc-first-class-citizen/" target="_blank">일급객체</a>로 취급하기 때문이다.
+
