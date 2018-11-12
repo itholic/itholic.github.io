@@ -78,6 +78,7 @@ linux: true
 etc: true
 database: true
 book: true
+javascript: true
 
 # if you don't need "review", comment them out below
 # review: true
