@@ -82,13 +82,12 @@ TypeError: Assignment to constant variable.
 ```js
 // let_hoisting.js
   1 console.log(a)
-  2 var a = 10
+  2 let a = 10
 ```
 
 위 코드를 실행하면 다음과 같은 에러가 발생한다.
 
 ```
-/home/iris/nodetest/var.js:1
 (function (exports, require, module, __filename, __dirname) { console.log(a)
                                                                           ^
 
@@ -118,11 +117,49 @@ a가 아직 선언되지 않았다는 에러이다.
 
 위 코드를 실행하면 let의 경우와 완전히 동일한 에러가 출력된다.
 
-마지막으로 간단히 var, const, let의 차이를 정리하자면 다음과 같다.
+여기까지 간단히 var, const, let의 차이를 정리하자면 다음과 같다.
 
 ```
-var   : 값의 변경 가능, 호이스팅 가능
-let   : 값의 변경 가능, 호이스팅 불가
-const : 값의 변경 불가, 호이스팅 불가
+var   : 값 변경 O, 호이스팅 O
+let   : 값 변경 O, 호이스팅 X
+const : 값 변경 X, 호이스팅 X
 ```
 
+호이스팅은 예기지 못한 에러를 발생할 수 있으므로,
+
+일반적으로 변수를 선언할때 let이나 const를 권유한다고 한다.
+
+<br/>
+
+마지막으로 재선언 가능 여부를 알아보자.
+
+결론부터 말하면 재선언은 var만 가능하다.
+
+```js
+var a = 10
+var a = 20
+```
+
+위 코드는 에러가 나지 않지만, 다음 두 개의 코드는 모두 에러가 난다.
+
+```js
+let a = 10
+let a = 20  // SyntaxError: Identifier 'b' has already been declared
+```
+
+```js
+const a = 10
+const a = 20  // SyntaxError: Identifier 'c' has already been declared
+```
+
+최종적으로 var, let, const의 차이를 정리하면 다음과 같다.
+
+```
+var   : 값 변경 O, 호이스팅 O, 재선언 O
+let   : 값 변경 O, 호이스팅 X, 재선언 X
+const : 값 변경 X, 호이스팅 X, 재선언 X
+```
+
+다시 말하지만, 
+
+호이스팅은 프로그램에 예기치 못한 결과를 야기할 수 있으므로 웬만하면 var 사용은 지양하는것이 좋다.

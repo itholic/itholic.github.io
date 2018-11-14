@@ -29,15 +29,15 @@ def switch_day_of_the_week(idx):
     }
     return dict_day_of_the_week.get(idx, '{} is invalid index (1-7)'.format(idx))
 
-day_of_the_week(0)  # '0 is invalid index (1-7)'
-day_of_the_week(1)  # 'monday'
-day_of_the_week(2)  # 'tuesday'
-day_of_the_week(3)  # 'wednesday'
-day_of_the_week(4)  # 'thursday'
-day_of_the_week(5)  # 'friday'
-day_of_the_week(6)  # 'saturday'
-day_of_the_week(7)  # 'sunday'
-day_of_the_week(8)  # '8 is invalid index (1-7)'
+switch_day_of_the_week(0)  # '0 is invalid index (1-7)'
+switch_day_of_the_week(1)  # 'monday'
+switch_day_of_the_week(2)  # 'tuesday'
+switch_day_of_the_week(3)  # 'wednesday'
+switch_day_of_the_week(4)  # 'thursday'
+switch_day_of_the_week(5)  # 'friday'
+switch_day_of_the_week(6)  # 'saturday'
+switch_day_of_the_week(7)  # 'sunday'
+switch_day_of_the_week(8)  # '8 is invalid index (1-7)'
 ```
 
 보통 딕셔너리의 값을 가져올 때에는 `dict[key]` 와 같은 형태로 가져오지만,
