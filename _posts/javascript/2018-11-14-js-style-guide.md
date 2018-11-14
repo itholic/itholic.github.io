@@ -11,7 +11,7 @@ sitemap:
   priority: 1.0
 ---
 
-# javascript coding convension (style guide)
+# javascript coding convention (style guide)
 
 일반적인 프로그래밍 언어가 그러하듯, javascript에도 권장하는 코딩 규칙(스타일)이 있다.
 
@@ -22,17 +22,29 @@ sitemap:
 참고로 기존 프로젝트에서 사용하던 규칙이 있다면, 무조건 이 규칙보다 우선이다.
 
 
-- 변수 선언시 var대신 let이나 const를 사용 (이는 <a href="https://itholic.github.io/js-hoisting/" target="_blank">hoisting 관련 포스팅</a> 및 <a href="https://itholic.github.io/js-var-let-const/" target="_blank">변수 관련 포스팅</a> 참조)
+<br/>
+
+변수와 함수명은 camelCase (단, 상수는 UPPER\_CASE)
 
 ```js
 // good
-let a = 1;
+let myName = 'itholic';
+
+function printMyName(name) {
+    console.log(myName);
+};
 
 // bad
-var a = 1;
+let my_name = 'itholic';
+
+function print_my_name(name) {
+    console.log(my_name);
+};
 ```
 
-- 상수(const)는 UPPER\_CASE로 명확히 표현
+<br/>
+
+상수(const)는 UPPER\_CASE로 명확히 표현
 
 ```js
 // good
@@ -42,8 +54,24 @@ const NAME = "itholic";
 const name = "itholic";
 ```
 
+<br/>
 
-- 한 번에 하나의 변수만 선언
+변수 선언시 var대신 let이나 const를 사용 (이는 <a href="https://itholic.github.io/js-hoisting/" target="_blank">hoisting 관련 포스팅</a> 및 <a href="https://itholic.github.io/js-var-let-const/" target="_blank">변수 관련 포스팅</a> 참조)
+
+```js
+// good
+let a = 1;
+
+// bad
+var a = 1;
+```
+
+
+
+<br/>
+
+
+한 번에 하나의 변수만 선언
 
 ```js
 // bad
@@ -57,7 +85,10 @@ let b = 2;
 let c = 3;
 ```
 
-- 파일명은 lower\_case 혹은 lower-case로 작성 (혼재해서 사용하지 말것)
+
+<br/>
+
+파일명은 lower\_case 혹은 lower-case로 작성 (혼재해서 사용하지 말것)
 
 ```
 // good
@@ -69,7 +100,10 @@ codingConvension.js
 coding_style-guide.js
 ```
 
-- 들여쓰기는 탭이나 4칸공백보다는 2칸 공백을 권유
+
+<br/>
+
+들여쓰기는 탭이나 4칸공백보다는 2칸 공백을 권유
 
 ```js
 // good
@@ -83,7 +117,10 @@ function foo() {
 }
 ```
 
-- 문장의 끝에 세미콜론 기재를 권유 (자바스크립트는 세미콜론이 강요되지 않음)
+
+<br/>
+
+문장의 끝에 세미콜론 기재를 권유 (자바스크립트는 세미콜론이 강요되지 않음)
 
 ```js
 var a1 = 10;
@@ -93,7 +130,10 @@ functions foo() {
 };
 ```
 
-- Arrow Function으로 표현할 수 있는 부분은 가급적 Arrow Function으로 표현할 것
+
+<br/>
+
+Arrow Function으로 표현할 수 있는 부분은 가급적 Arrow Function으로 표현할 것
 
 ```js
 // good
@@ -105,7 +145,10 @@ functions foo() {
 });
 ```
 
-- 문자열 연결시 + 보다는 탬플릿 문자열로 표현 (따옴표 모양 유심히 볼 것)
+
+<br/>
+
+문자열 연결시 + 보다는 탬플릿 문자열로 표현 (따옴표 모양 유심히 볼 것)
 
 ```js
 let name = "itholic";
@@ -118,7 +161,10 @@ console.log("My name is " + name);
 ```
 
 
-- 문자열은 큰따옴표(") 보다는 작은따옴표(')를 사용, 문자열에 작은따옴표 포함시 탬플릿 문자열 사용 (`)
+<br/>
+
+
+문자열은 큰따옴표(") 보다는 작은따옴표(')를 사용, 문자열에 작은따옴표 포함시 탬플릿 문자열 사용 (`)
 
 ```js
 // bad
