@@ -62,6 +62,14 @@
             {% endif %}
         {% endif %}
 
+        {% if site.code == true %}
+            {% if page.title != "Code" %}
+                <li class="item">
+                    <a class="link" href="{{ site.url }}/code">Code</a>
+                </li>
+            {% endif %}
+        {% endif %}
+
         {% if site.etc == true %}
             {% if page.title != "Etc" %}
                 <li class="item">
