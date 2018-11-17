@@ -2,9 +2,8 @@
 title: "[code] Hello, world!"
 layout: post
 tag:
-- javascript
-- nodejs
-category: javascript
+- code
+category: code
 author: itholic
 sitemap:
   changefreq: daily
@@ -14,9 +13,12 @@ sitemap:
 
 # Hello, world!
 
+
 각 언어별 간단한 Hello, world! 예제
 
 추가 학습시 계속 업데이트 예정
+
+<br/>
 
 **C**
 
