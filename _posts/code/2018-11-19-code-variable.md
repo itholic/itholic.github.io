@@ -197,7 +197,7 @@ python은  그냥 변수를 선언하고 원하는 값을 담아주면 자동으
 참고로 세미콜론(;)도 사용하지 않는다.
 
 ```python
-str = "string"
+str1 = "string"
 num1 = 123
 num2 = 123.456
 flag = TRUE
