@@ -1,5 +1,5 @@
 ---
-title: "[kata][python] input 값 받아서 출력하기"
+title: "[kata][python] input 값 받아서 더한 결과 출력하기"
 layout: post
 tag:
 - kata
@@ -29,11 +29,11 @@ print (int(a) + int(b))
 
 input으로 받은 데이터를 'input_data' 변수에 넣고,
 
-data를 다시 공백 기준으로 잘라서 각각 a, b 변수에 넣었다.
+input_data를 다시 공백 기준으로 잘라서 각각 a, b 변수에 넣었다.
 
 그리고 print를 하면서 동시에 자료형 변환을 해주었다.
 
-## 예제 풀이
+## 다른사람 풀이
 
 ```python
 # -*- coding: utf-8 -*-
