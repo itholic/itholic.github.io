@@ -1,5 +1,5 @@
 ---
-title: "[go/golang] 변수"
+title: "[go/golang] variable (변수)"
 layout: post
 tag:
 - go
