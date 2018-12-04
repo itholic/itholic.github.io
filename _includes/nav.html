@@ -38,6 +38,14 @@
             {% endif %}
         {% endif %}
 
+        {% if site.javascript == true %}
+            {% if page.title != "go" %}
+                <li class="item">
+                    <a class="link" href="{{ site.url }}/go">Go</a>
+                </li>
+            {% endif %}
+        {% endif %}
+
         {% if site.linux == true %}
             {% if page.title != "Linux" %}
                 <li class="item">
