@@ -86,6 +86,14 @@
             {% endif %}
         {% endif %}
 
+        {% if site.thinking == true %}
+            {% if page.title != "Thinking" %}
+                <li class="item">
+                    <a class="link" href="{{ site.url }}/thinking">Thinking</a>
+                </li>
+            {% endif %}
+        {% endif %}
+
         {% if site.etc == true %}
             {% if page.title != "Etc" %}
                 <li class="item">
