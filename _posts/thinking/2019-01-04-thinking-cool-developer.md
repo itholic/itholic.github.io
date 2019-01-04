@@ -1,5 +1,5 @@
 ---
-title: "[thinking] 쿨(cool)하다는건 뭘까? (feat. 소프트웨어 장인정신, 프로페셔널리즘)"
+title: "[thinking] 쿨한 개발자 (feat. 소프트웨어 장인정신, 프로페셔널리즘)"
 layout: post
 tag:
 - thinking
