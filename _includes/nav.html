@@ -39,7 +39,7 @@
         {% endif %}
 
         {% if site.javascript == true %}
-            {% if page.title != "go" %}
+            {% if page.title != "Go" %}
                 <li class="item">
                     <a class="link" href="{{ site.url }}/go">Go</a>
                 </li>
@@ -50,6 +50,14 @@
             {% if page.title != "Linux" %}
                 <li class="item">
                     <a class="link" href="{{ site.url }}/linux">Linux</a>
+                </li>
+            {% endif %}
+        {% endif %}
+
+        {% if site.linux == true %}
+            {% if page.title != "Git" %}
+                <li class="item">
+                    <a class="link" href="{{ site.url }}/git">Git</a>
                 </li>
             {% endif %}
         {% endif %}
