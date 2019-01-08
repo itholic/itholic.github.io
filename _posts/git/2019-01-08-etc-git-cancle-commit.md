@@ -1,10 +1,9 @@
 ---
-title: "git add 취소, git commit 취소, git push 취소"
+title: "[git] add 취소, commit 취소, push 취소"
 layout: post
 tag:
-- etc
 - git
-category: etc
+category: git
 author: itholic
 sitemap:
   changefreq: daily

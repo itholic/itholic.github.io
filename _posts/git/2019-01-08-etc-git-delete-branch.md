@@ -1,10 +1,9 @@
 ---
-title: "git 브랜치 삭제 (git delete branch)"
+title: "[git] 브랜치 삭제"
 layout: post
 tag:
-- etc
 - git
-category: etc
+category: git
 author: itholic
 sitemap:
   changefreq: daily
