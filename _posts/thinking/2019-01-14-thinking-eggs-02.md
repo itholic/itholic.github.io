@@ -1,5 +1,5 @@
 ---
-title: "[계란 한 판] 02. 디지털아트"
+title: "[계란 한 판] 스물하나, 디지털아트"
 layout: post
 tag:
 - thinking
@@ -14,13 +14,13 @@ sitemap:
 
 앞서 기록한
 
-<a href="https://itholic.github.io/thinking-eggs-01/" target="_blank">"01. 디자인과에 진학한 이과생"</a>
+<a href="https://itholic.github.io/thinking-eggs-01/" target="_blank">"스물, 이과, 디자인"</a>
 
 에 이어지는 두 번째 기록이다.
 
 <br/>
 
-## 02. 디지털아트
+## 스물하나, 디지털아트
 
 <br/>
 

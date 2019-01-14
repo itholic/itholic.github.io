@@ -1,5 +1,5 @@
 ---
-title: "[계란 한 판] 03. 학위라는 껍데기1"
+title: "[계란 한 판] 스물셋, 학위라는껍데기1 (학부)"
 layout: post
 tag:
 - thinking
@@ -14,15 +14,15 @@ sitemap:
 
 앞서 기록한
 
-<a href="https://itholic.github.io/thinking-eggs-01/" target="_blank">"01. 디자인과에 진학한 이과생"</a>
+<a href="https://itholic.github.io/thinking-eggs-01/" target="_blank">"스물, 이과, 디자인"</a>
 
-<a href="https://itholic.github.io/thinking-eggs-02/" target="_blank">"02. 디지털아트"</a>
+<a href="https://itholic.github.io/thinking-eggs-02/" target="_blank">"스물하나, 디지털아트"</a>
 
 에 이어지는 세 번째 기록이다.
 
 <br/>
 
-## 03. 학위라는 껍데기1
+## 스물셋, 학위라는껍데기1 (학부)
 
 <br/>
 
