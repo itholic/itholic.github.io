@@ -144,11 +144,11 @@ copy (source_csv/038.csv)
  36     print(time.time() - start)
 ```
 
-우선 21번 라인을 보면 normal\_copy 대신 parallen\_copy 함수로 바꾸었다.
+21번 라인의 normal\_copy 함수를 parallel\_copy 함수로 바꾸었다.
 
-22번 라인에서 경로에있는 모든 파일들을 copy\_from 함수의 인자로 주어 쓰레드를 생성했다.
+22번 라인에서 경로에있는 모든 파일들을 copy\_from 함수의 인자로 주어 쓰레드 리스트를 생성했다.
 
-그 후 24번 라인에서 모든 쓰레드를 수행했다.
+그 후 24번 라인에서 리스트에 있는 모든 쓰레드를 수행했다.
 
 <br/>
 
