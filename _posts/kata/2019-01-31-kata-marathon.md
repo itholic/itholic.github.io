@@ -12,7 +12,7 @@ sitemap:
 
 # 완주하지 못한 선수
 
-출처: <a href="https://www.acmicpc.net/problem/1043" target="_blank">백준 알고리즘 1043번 문제</a>
+출처: <a href="https://programmers.co.kr/learn/courses/30/lessons/42576" target="_blank">프로그래머스 - 완주하지 못한 선수</a>
 
 ## 문제
 
