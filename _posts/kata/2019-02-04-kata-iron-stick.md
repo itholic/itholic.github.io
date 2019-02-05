@@ -1,5 +1,5 @@
 ---
-title: "[kata][python] 프로그래머스 - 베스트앨범"
+title: "[kata][python] 프로그래머스 - 쇠막대기"
 layout: post
 tag:
 - kata
