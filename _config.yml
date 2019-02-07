@@ -80,7 +80,7 @@ etc: true
 database: true
 book: true
 javascript: true
-code: true
+# code: true
 kata: true
 go: true
 thinking: true

@@ -175,55 +175,55 @@ queue의 변수명이 stack으로 바뀌었고, 8번 라인에서 pop(0) 을 하
 혹시 개선할 부분이 있거나 잘못 구현된 부분이 있다면 꼭 댓글을 달아줬으면 좋겠다!
 
 ```python
-  1 def bfs(graph, start_node):
-  2     visit = list()
-  3     queue = list()
-  4
-  5     queue.append(start_node)
-  6
-  7     while queue:
-  8         node = queue.pop(0)
-  9         if node not in visit:
- 10             visit.append(node)
- 11             queue.extend(graph[node])
- 12
- 13     return visit
- 14
- 15
- 16 def dfs(graph, start_node):
- 17     visit = list()
- 18     stack = list()
- 19
- 20     stack.append(start_node)
- 21
- 22     while stack:
- 23         node = stack.pop()
- 24         if node not in visit:
- 25             visit.append(node)
- 26             stack.extend(graph[node])
- 27
- 28     return visit
- 29
- 30
- 31 if __name__ == "__main__":
- 32     graph = {
- 33         'A': ['B'],
- 34         'B': ['A', 'C', 'H'],
- 35         'C': ['B', 'D', 'G'],
- 36         'D': ['C', 'E'],
- 37         'E': ['D', 'F'],
- 38         'F': ['E'],
- 39         'G': ['C'],
- 40         'H': ['B', 'I', 'J', 'M'],
- 41         'I': ['H'],
- 42         'J': ['H', 'K'],
- 43         'K': ['J', 'L'],
- 44         'L': ['K'],
- 45         'M': ['H']
- 46     }
- 47
- 48     print(bfs(graph, 'A'))
- 49     print(dfs(graph, 'A'))
+def bfs(graph, start_node):
+    visit = list()
+    queue = list()
+
+    queue.append(start_node)
+
+    while queue:
+        node = queue.pop(0)
+        if node not in visit:
+            visit.append(node)
+            queue.extend(graph[node])
+
+    return visit
+
+
+def dfs(graph, start_node):
+    visit = list()
+    stack = list()
+
+    stack.append(start_node)
+
+    while stack:
+        node = stack.pop()
+        if node not in visit:
+            visit.append(node)
+            stack.extend(graph[node])
+
+    return visit
+
+
+if __name__ == "__main__":
+    graph = {
+        'A': ['B'],
+        'B': ['A', 'C', 'H'],
+        'C': ['B', 'D', 'G'],
+        'D': ['C', 'E'],
+        'E': ['D', 'F'],
+        'F': ['E'],
+        'G': ['C'],
+        'H': ['B', 'I', 'J', 'M'],
+        'I': ['H'],
+        'J': ['H', 'K'],
+        'K': ['J', 'L'],
+        'L': ['K'],
+        'M': ['H']
+    }
+
+    print(bfs(graph, 'A'))
+    print(dfs(graph, 'A'))
 ```
 
 
