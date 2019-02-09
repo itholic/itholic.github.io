@@ -12,7 +12,6 @@ sitemap:
 
 # generator
 
-
 generator는 얼핏 함수와 비슷하지만, 호출시 generator 객체를 반환한다.
 
 generator 객체는 Iterable하며, next() 메소드를 통해 다음 yield 값을 리턴한다.
@@ -70,3 +69,7 @@ print gen.send('hi')  # hi \n 10
 메인루틴과 지속적인 협력관계를 유지하는 루틴을 coroutine이라고 한다.
 """
 ```
+
+## 20190210: Youtube 설명 보충
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3fD9ZiVu7n4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

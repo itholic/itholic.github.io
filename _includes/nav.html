@@ -102,6 +102,14 @@
             {% endif %}
         {% endif %}
 
+        {% if site.youtube == true %}
+            {% if page.title != "Youtube" %}
+                <li class="item">
+                    <a class="link" href="{{ site.url }}/youtube">Youtube</a>
+                </li>
+            {% endif %}
+        {% endif %}
+
         {% if site.etc == true %}
             {% if page.title != "Etc" %}
                 <li class="item">
