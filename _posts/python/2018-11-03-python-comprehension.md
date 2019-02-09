@@ -185,3 +185,7 @@ zip(k_list, v_list)  # [('name', 'itholic'), ('age', 29), ('gender', 'male')]
 다만, '알지만 사용하지 않는 것'과 '몰라서 사용하지 못하는 것'은 완전히 다르기때문에,
 
 다른 사람의 코드를 읽을 경우를 대비해서라도 이런 방식에 대해 어느정도 감은 잡아두는 것이 좋다고 생각한다.
+
+## 190210 - 동영상 설명 추가
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gdvObr0tnPw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
