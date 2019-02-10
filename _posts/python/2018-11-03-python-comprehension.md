@@ -188,4 +188,4 @@ zip(k_list, v_list)  # [('name', 'itholic'), ('age', 29), ('gender', 'male')]
 
 ## 190210 - 동영상 설명 추가
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gdvObr0tnPw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FZD14KsK42w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
