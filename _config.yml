@@ -31,7 +31,7 @@ analytics-google: 'UA-127982066-1'
 # if you don't want comments in your posts, leave categories empty
 disqus:
   shortname: itholic-1 # enter this from your disqus account
-  categories: [about, python, javascript, go, linux, git, database, book, code, kata, thinking, youtube, etc] # only show disqus for posts that have these categories
+  categories: [about, python, javascript, go, linux, git, database, book, code, kata, thinking, etc] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
 # facebook: chungil.lee.779
@@ -39,7 +39,7 @@ disqus:
 # instagram: mr.martine
 # pinterest: mypinterest
 # linkedin: mylinkedin
-# youtube: myyoutube
+youtube: HaeJoonLee
 # spotify: myspotify
 github: itholic
 # lastfm: mylastfm
@@ -84,7 +84,7 @@ javascript: true
 kata: true
 go: true
 thinking: true
-youtube: true
+# youtube: true
 
 # if you don't need "review", comment them out below
 # review: true
