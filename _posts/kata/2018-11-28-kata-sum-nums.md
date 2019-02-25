@@ -1,5 +1,5 @@
 ---
-title: "[kata][python] 공백 없이 들어온 숫자의 합"
+title: "[kata][python] 숫자의 합"
 layout: post
 tag:
 - kata
@@ -10,7 +10,7 @@ sitemap:
   priority: 1.0
 ---
 
-# 공백 없이 들어온 특정 갯수의 숫자 합 구하기
+# 숫자의 합
 
 출처: <a href="https://www.acmicpc.net/problem/11720" target="_blank">백준 알고리즘 11720번 문제</a>
 

@@ -1,5 +1,5 @@
 ---
-title: "[kata][python] input 값 받아서 더한 결과 출력하기"
+title: "[kata][python] A + B"
 layout: post
 tag:
 - kata
@@ -10,7 +10,9 @@ sitemap:
   priority: 1.0
 ---
 
-# input
+# A + B
+
+출처: <a href="https://www.acmicpc.net/problem/1000" target="_blank">백준 알고리즘 1000번 문제</a>
 
 사용자 input으로 a, b 두 개의 값을 받아서 a + b 를 출럭하는 간단한 문제이다.
 

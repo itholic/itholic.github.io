@@ -1,5 +1,5 @@
 ---
-title: "[kata][python] 별 출력하기"
+title: "[kata][python] 별 찍기 - 4"
 layout: post
 tag:
 - kata
@@ -10,7 +10,9 @@ sitemap:
   priority: 1.0
 ---
 
-# input
+# 별 찍기 - 4
+
+출처: <a href="https://www.acmicpc.net/problem/2441" target="_blank">백준 알고리즘 2441번 문제</a>
 
 사용자 input으로 정수 N을 받아서 첫 째 줄부터 N번째 줄까지 별을 출력하는 예제이다.
 

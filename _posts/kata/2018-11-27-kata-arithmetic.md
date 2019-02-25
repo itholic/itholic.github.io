@@ -1,5 +1,5 @@
 ---
-title: "[kata][python] input 값 받아서 사칙연산 결과 출력하기"
+title: "[kata][python] 사칙연산"
 layout: post
 tag:
 - kata
@@ -10,7 +10,9 @@ sitemap:
   priority: 1.0
 ---
 
-# input
+# 사칙연산
+
+출처: <a href="https://www.acmicpc.net/problem/10869" target="_blank">백준 알고리즘 10869번 문제</a>
 
 사용자 input으로 a, b 두 개의 값을 받아서
 

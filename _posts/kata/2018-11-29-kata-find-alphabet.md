@@ -10,7 +10,7 @@ sitemap:
   priority: 1.0
 ---
 
-# 특정 문자열에서 각 알파벳이 등장한 위치 찾기
+# 알파벳 찾기
 
 출처: <a href="https://www.acmicpc.net/problem/10809" target="_blank">백준 알고리즘 10809번 문제</a>
 

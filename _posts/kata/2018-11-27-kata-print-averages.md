@@ -1,5 +1,5 @@
 ---
-title: "[kata][python] 평균을 넘는 학생의 비율"
+title: "[kata][python] 평균은 넘겠지"
 layout: post
 tag:
 - kata
@@ -10,7 +10,7 @@ sitemap:
   priority: 1.0
 ---
 
-# 평균을 넘는 학생의 비율은?
+# 평균은 넘겠지
 
 출처: <a href="https://www.acmicpc.net/problem/4344" target="_blank">백준 알고리즘 4344번 문제</a>
 
