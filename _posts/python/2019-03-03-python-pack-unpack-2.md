@@ -1,5 +1,5 @@
 ---
-title: "[python] packing, unpacking 2 (`**`의 용도)"
+title: "[python] packing, unpacking 2 (**kwargs)"
 layout: post
 tag:
 - python

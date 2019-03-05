@@ -1,5 +1,5 @@
 ---
-title: "[python] \*args, \*\*kwargs"
+title: "[python] *args, **kwargs"
 layout: post
 tag:
 - python
