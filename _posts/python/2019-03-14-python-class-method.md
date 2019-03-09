@@ -1,5 +1,5 @@
 ---
-title: "[python] class method"
+title: "[python] @classmethod"
 layout: post
 tag:
 - python
