@@ -70,6 +70,14 @@
             {% endif %}
         {% endif %}
 
+        {% if site.docker == true %}
+            {% if page.title != "Docker" %}
+                <li class="item">
+                    <a class="link" href="{{ site.url }}/docker">Docker</a>
+                </li>
+            {% endif %}
+        {% endif %}
+
         {% if site.qa == true %}
             {% if page.title != "QA" %}
                 <li class="item">
