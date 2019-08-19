@@ -83,6 +83,14 @@ sitemap:
 $ sudo yum install haskell-platform
 ```
 
+<>
+
+MacOS에서도 설치하게 되어, MacOS 설치 명령어도 추가한다.
+
+```shell
+$ brew install ghc cabal-install
+```
+
 <br/>
 
 설치했으니까 실행해보자.
@@ -133,6 +141,26 @@ Prelude> putStrLn 1
     In an equation for `it': it = putStrLn 1
 Prelude>
 
+```
+
+<br/>
+
+숫자를 출력하려면 다음과 같이 show 함수를 함께 사용해주면 된다.
+
+show 함수는 인자로 받은 객체를 String 타입으로 반환해준다.
+
+```haskell
+Prelude> putStrLn(show 1)
+1
+Prelude>
+```
+
+show도 함수이므로, 다음과 같이 괄호를 한 번 더 써서 표현할 수도 있다.
+
+```haskell
+Prelude> putStrLn(show(1))
+1
+Prelude>
 ```
 
 <br/>
