@@ -14,7 +14,7 @@ sitemap:
 
 <br/>
 
-github에서 PR(Pull Request)의 개념은 중요하다.
+깃허브에서 PR(Pull Request)의 개념은 중요하다.
 
 핵심은, 내가 작업한 코드가 원본 저장소에 합쳐져도 좋은지 '검토'를 받는 것이다.
 
@@ -40,9 +40,11 @@ PR은 다음과 같이 크게 두 가지 방식으로 작성 가능하다.
 2. write 권한이 없는 레파지토리의 fork 저장소를 받아 작업후 PR.
   - 예) 오픈소스처럼 write 권한이 없는 프로젝트에 기여하고 싶을때
 
+<br/>
+
 참고로 두 번째 방식은 write 권한이 있는 레파지토리에서도 당연히 사용 가능하므로,
 
-추후 오픈소스에 컨트리뷰트랑 생각이 있다면 이 방식으로 연습하는게 더 나을것이다.
+추후 오픈소스에 컨트리뷰트할 생각이 있다면 이 방식으로 연습하는게 더 나을것이다.
 
 첫 번째 방식은 좀 더 편하고, 두 번째 방식은 더 범용적인 방식이라고 말해두겠다.
 
@@ -361,17 +363,25 @@ upstream 설정은 원본 저장소(databricks/koalas)와 fork 저장소(itholic
 
 <br/>
 
-원본 저장소를 바로 가져와 작업하는 경우는 git pull과 같은 명령어로 손쉽게 변경내용을 가져올 수 있다.
+하지만 fork를해서 복제본을 만든 경우,
 
-이는 내가 현재 작업중인 저장소와 원본 저장소가 같은 저장소이기 때문에 가능하다.
+현재로써는 원본 저장소의 위치를 알 수 없다.
 
-하지만 오픈소스와 같이 fork를 통해 복제본을 만들어 작업하는 경우에는,
+git remote 명령으로 원격 저장소들의 목록을 확인해보자.
 
-명시적으로 어떤 저장소가 원본 저장소인지 등록을 해두어야한다.
+```
+$ git remote -v
+origin	https://github.com/itholic/koalas.git (fetch)
+origin	https://github.com/itholic/koalas.git (push)
+```
+
+현재 원본 저장소는 ~databricks/koalas.git 인데,
+
+내가 fork한 복제본인 ~itholic/koalas.git 밖에 인식하지 못한다.
 
 <br/>
 
-이는 다음과 같이 git remote 라는 명령을 통해 가능하다.
+원격 저장소의 위치를 인식할 수 있도록 등록을 해주면 된다.
 
 git remote add 명령어 뒤에 원본 저장소의 별칭과 git url을 적어주면 된다.
 
@@ -383,19 +393,7 @@ $ git remote add upstream https://github.com/databricks/koalas.git
 
 하지만 관습적으로 원본 저장소에 대한 별칭으로 "upstream"이라는 키워드를 사용한다고 한다.
 
-git remote 명령을 확인해 제대로 등록이 되었는지 확인 가능하다.
-
-```shell
-$ git remote
-origin
-upstream
-```
-
-origin은 내가 처음 clone 받은 저장소(fork 받은 복제본, itholic/koalas)의 별칭이고,
-
-upstream은 방금 추가한 원본 저장소(databricks/koalas)이다.
-
-정말 그런지 궁금하면 다음과 같이 v 옵션을 주어 확인하면 된다.
+다시 git remote 명령으로 제대로 등록이 되었는지 확인해보자.
 
 ```shell
 $ git remote -v
@@ -404,6 +402,8 @@ origin	https://github.com/itholic/koalas.git (push)
 upstream	https://github.com/databricks/koalas.git (fetch)
 upstream	https://github.com/databricks/koalas.git (push)
 ```
+
+upstream이라는 이름으로 등록된 원본 저장소(databricks/koalas)를 확인할 수 있다.
 
 근데 origin에 해당하는 동일한 url이 두 개가 있고, upstream또한 그렇다.
 
@@ -436,6 +436,12 @@ From https://github.com/databricks/koalas
  * [new branch]      master     -> upstream/master
 $
 ```
+
+<br/>
+
+참고로 fetch가 아닌 pull 명령으로도 코드를 가져올 수 있는데,
+
+이 두 명령어의 차이는 따로 포스팅하도록 하겠다.
 
 <br/>
 
