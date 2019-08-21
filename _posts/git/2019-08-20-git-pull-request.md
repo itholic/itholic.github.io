@@ -1,5 +1,5 @@
 ---
-title: "[git] 깃허브 풀 리퀘스트(Pull Request, PR)"
+title: "[git] pull request를 날려 오픈소스에 기여해보자!"
 layout: post
 tag:
 - git
@@ -32,11 +32,41 @@ github에서 PR(Pull Request)의 개념은 중요하다.
 
 <br/>
 
-자 그럼 각설하고, 실제로 간단하게 사용해보자.
+PR은 다음과 같이 크게 두 가지 방식으로 작성 가능하다.
+
+1. write 권한이 있는 레파지토리의 원본 저장소를 받아 작업후 PR.
+  - 예) 내게 write 권한이 있으며, 여러 사람이 작업하는 사내 프로젝트의 경우
+
+2. write 권한이 없는 레파지토리의 fork 저장소를 받아 작업후 PR.
+  - 예) 오픈소스처럼 write 권한이 없는 프로젝트에 기여하고 싶을때
+
+참고로 두 번째 방식은 write 권한이 있는 레파지토리에서도 당연히 사용 가능하므로,
+
+추후 오픈소스에 컨트리뷰트랑 생각이 있다면 이 방식으로 연습하는게 더 나을것이다.
+
+첫 번째 방식은 좀 더 편하고, 두 번째 방식은 더 범용적인 방식이라고 말해두겠다.
+
+(물론 사람에따라 개인차는 있다)
+
+이 글에서는 두 가지 방식 모두 정리할 것이다.
 
 <br/>
 
-## 1. git 레파지토리 받아오기
+## A. 원본 저장소를 바로 clone해서 작업하기
+
+<br/>
+
+저장소를 따로 fork 받지 않고 원본 저장소를 다이렉트로 받아서 작업하는 방식이다.
+
+그리고 앞에서도 말하긴 했지만, 이 경우 PR을 요청할때 write 권한이 있어야한다.
+
+fork에 대해서는 두 번째 방식을 설명할때 같이 설명하도록 하겠다.
+
+바로 시작해보자.
+
+<br/>
+
+### 1. git 레파지토리 받아오기
 
 <br/>
 
@@ -56,7 +86,7 @@ clone url은 원본 저장소의 우측에 초록색으로 표시된 "Clone or d
 
 <br/>
 
-## 2. 작업 branch 만들기
+### 2. 작업 branch 만들기
 
 <br/>
 
@@ -82,7 +112,7 @@ my_branch
 
 잘 만들어졌다.
 
-현재 작업중인 브랜치는 앞에 애스터리스크(*) 표시가 붙어있다.
+현재 작업중인 브랜치는 앞에 애스터리스크(\*) 표시가 붙어있다.
 
 현재는 master 브랜치이므로 방금 생성한 my\_branch로 변경해보자.
 
@@ -111,7 +141,7 @@ checkout에 -b 옵션을 주면, 브랜치 생성과 동시에 해당 브랜치�
 
 <br/>
 
-## 3. 내 작업 branch에 commit
+### 3. 내 작업 branch에 commit
 
 <br/>
 
@@ -153,7 +183,7 @@ $ git push origin my_branch
 
 <br/>
 
-## 4. pull request !
+### 4. pull request !
 
 <br/>
 
@@ -181,7 +211,7 @@ pull request를 하려면 바로 이 버튼을 누르면 된다.
 
 <br/>
 
-## 5. 기다리기
+### 5. 기다리기
 
 <br/>
 
@@ -205,4 +235,214 @@ Close and comment 버튼을 눌러 PR을 아예 없애버릴수도 있다 (ㅜ�
 
 <br/>
 
-이로써, 간단하게 github에서 pull request 하는 방법을 알아보았다!
+## B. 원본 저장소를 fork 받아서 작업하기
+
+<br/>
+
+이번에는 우선 원본 저장소를 fork 받고,
+
+fork받은 저장소에서 작업 후 PR하는 방식이다.
+
+<br/>
+
+fork는 말그대로 포크로 음식을 찍어오듯이,
+
+상대방의 레파지토리를 찍어서 내가 작업 가능한 환경으로 그대로 가져오는것이다.
+
+이렇게 말하면 마치 상대방 레파지토리를 훔쳐오는 것 같은데,
+
+그냥 원본 저장소와 똑같은 복제본을 하나 만든다고 생각하면 된다.
+
+<br/>
+
+나에게 권한이 없는 저장소의 경우,
+
+원본 저장소에 맘대로 수정사항을 반영할 수 없는건 당연하다.
+
+그래서 복제본을 만들어서 그곳에 마음대로 작업한 이후에,
+
+이 작업본이 어때요? 하고 원본 저장소의 주인에게 물어보는 개념이라고 보면 된다.
+
+<br/>
+
+바로 시작해보자.
+
+<br/>
+
+### 1. git 레파지토리 fork 받기
+
+<br/>
+
+fork받는건 정말 쉽다.
+
+실제로 오픈소스에 컨트리뷰트할때 이런식으로 작업하므로, koalas라는 오픈소스를 예제로 가져왔다.
+
+다음과 같이 작업하고자하는 레파지토리에 들어가보면, 우측 상단에 "Fork" 라는 버튼이 있다.
+
+![fork](/assets/images/2019/08/20/git-pull-request/fork.png)
+
+버튼을 누르면 다음과 같이 잠시 로딩화면이 뜬다.
+
+![forking](/assets/images/2019/08/20/git-pull-request/forking.png)
+
+잠깐 기다리면 다음과 같이 포크가 완료된다.
+
+![finish_fork](/assets/images/2019/08/20/git-pull-request/finish_fork.png)
+
+얼핏 보면 원본 저장소처럼 보이지만,
+
+좌측 상단을 보면 개인 계정 밑으로(itholic/koalas) 저장소의 사본이 생성된 것을 확인할 수 있다.
+
+<br/>
+
+**이후의 과정은 첫 번째 방식과 동일하다.**
+
+이 저장소를 clone 받고, branch를 만들고, 작업이 완료되면 push하면 된다.
+
+1~3 까지는 첫 번째 과정과 완전히 같으므로 해당 내용을 참고하면 된다.
+
+<br/>
+
+### 2. pull request!
+
+<br/>
+
+사실 PR을 생성하는 부분도 다를바는 없다.
+
+하지만 약~~간 다른 부분이 있어서 설명을 위해 절차를 넣었다.
+
+<br/>
+
+포크한 저장소에서 작업을 한 다음 변경사항을 커밋하면 다음과 같이 PR 버튼이 활성화된다.
+
+![pr_fokred](/assets/images/2019/08/20/git-pull-request/pr_fokred.png)
+
+여기까지는 처음 방식과 똑같다.
+
+좌측 상단을 보면 알겠지만, 현재 위치는 원본 저장소가 아닌 포크받은 나만의 저장소이다.
+
+하지만 Compare & pull request 버튼을 누르면 다음과 같이 원본 저장소로 PR 요청을 생성하게된다.
+
+![pr_origin](/assets/images/2019/08/20/git-pull-request/pr_origin.png)
+
+좌측 상단을 보면 "itholic" 이었던 부분이 다시 원본 저장소인 "databricks"로 변경된 것을 확인할 수 있다.
+
+자세히보면 itholic/koalas의 hjlee 브랜치에서 **itholic**/koalas의 master 브랜치로 머지하는것이 아니라,
+
+itholic/koalas의 hjlee 브랜치에서 바로 **databricks**/koalas의 master 브랜치로 머지를 요청하고있다.
+
+<br/>
+
+즉, 개인 레파지토리에 PR을 요청하는 것이 아닌 원본 저장소에 PR을 요청하는 것이므로,
+
+오픈소스에 컨트리뷰트할 경우(PR을 요청할 경우)에는 이 시점에서 작업 내용에 대한 PR코멘트를 성의있게 작성해야한다.
+
+이후에 기다리는 과정은 동일하다.
+
+<br/>
+
+## 3. upstream 설정하기
+
+<br/>
+
+기본적인 PR 생성에 관련된 설명은 끝났고, 이는 부가설명이다.
+
+upstream 설정은 원본 저장소(databricks/koalas)와 fork 저장소(itholic/koalas)를 동기화하기 위한 작업이라고 보면 된다.
+
+<br/>
+
+원본 저장소를 fork로 가져와서 작업할 경우,
+
+현재 내가 작업중인 브랜치는 원본이 아닌 복제본이다.
+
+그리고 원본 저장소에는 누가, 언제 코드를 변경할지 모른다.
+
+만약 변경사항이 있다면, 현재 내가 작업중인 복제본에도 이 부분을 반영해야 할 것이다.
+
+<br/>
+
+원본 저장소를 바로 가져와 작업하는 경우는 git pull과 같은 명령어로 손쉽게 변경내용을 가져올 수 있다.
+
+이는 내가 현재 작업중인 저장소와 원본 저장소가 같은 저장소이기 때문에 가능하다.
+
+하지만 오픈소스와 같이 fork를 통해 복제본을 만들어 작업하는 경우에는,
+
+명시적으로 어떤 저장소가 원본 저장소인지 등록을 해두어야한다.
+
+<br/>
+
+이는 다음과 같이 git remote 라는 명령을 통해 가능하다.
+
+git remote add 명령어 뒤에 원본 저장소의 별칭과 git url을 적어주면 된다.
+
+```shell
+$ git remote add upstream https://github.com/databricks/koalas.git
+```
+
+참고로 "upstream" 부분은 본인이 원하는 임의의 별칭을 사용해도 상관없다.
+
+하지만 관습적으로 원본 저장소에 대한 별칭으로 "upstream"이라는 키워드를 사용한다고 한다.
+
+git remote 명령을 확인해 제대로 등록이 되었는지 확인 가능하다.
+
+```shell
+$ git remote
+origin
+upstream
+```
+
+origin은 내가 처음 clone 받은 저장소(fork 받은 복제본, itholic/koalas)의 별칭이고,
+
+upstream은 방금 추가한 원본 저장소(databricks/koalas)이다.
+
+정말 그런지 궁금하면 다음과 같이 v 옵션을 주어 확인하면 된다.
+
+```shell
+$ git remote -v
+origin	https://github.com/itholic/koalas.git (fetch)
+origin	https://github.com/itholic/koalas.git (push)
+upstream	https://github.com/databricks/koalas.git (fetch)
+upstream	https://github.com/databricks/koalas.git (push)
+```
+
+근데 origin에 해당하는 동일한 url이 두 개가 있고, upstream또한 그렇다.
+
+잘 보면 (fetch) 와 (push)로 나뉘어지는데, fetch는 읽기, push는 쓰기라고 보면 된다.
+
+즉, 위 네 줄의 출력 결과가 순서대로 의미하는 바는 각각 다음과 같다.
+
+1. origin이라는 별칭으로 읽기(fetch) 작업을 할때 어떤 저장소를 읽을 것인지 보여준다. (보다시피 itholic/koalas 즉, 복제본)
+
+2. origin이라는 별칭으로 쓰기(push) 작업을 할때 어떤 저장소에 쓸 것인지 보여준다. (마찬가지로 복제본)
+
+3. upstream 이라는 별칭으로 읽기(fetch) 작업을 할때 어떤 저장소를 읽을 것인지 보여준다. (보다시피 databricks/koalas 즉, 원본)
+
+4. upstream 이라는 별칭으로 쓰기(push) 작업을 할때 어떤 저장소에 쓸 것인지 보여준다. (마찬가지로 원본)
+
+이제 원본 저장소의 최신 버전을 읽어오려면 어떤 명령을 수행해야할지 감이 잡힌다.
+
+3번째 줄의 내용을 참고해, "upstream"이라는 별칭(원본)으로 "fetch" 작업(읽기)을 하면 될 것이다.
+
+즉, 원본 저장소와 현재 내 저장소를 동기화시키고싶다면 다음과 같이 명령하면 된다.
+
+```shell
+$ git fetch upstream
+remote: Enumerating objects: 21, done.
+remote: Counting objects: 100% (21/21), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 11 (delta 10), reused 5 (delta 5), pack-reused 0
+Unpacking objects: 100% (11/11), done.
+From https://github.com/databricks/koalas
+ * [new branch]      master     -> upstream/master
+$
+```
+
+<br/>
+
+이로써, 간단하게 github에서 PR을 생성하는 두 가지 방법을 알아보았다.
+
+이제 우리는 언제든 오픈소스에 기여(contribution)할 수 있게되었다.
+
+오픈소스에 기여하는것은 생각보다 어렵지 않다. (그렇다고 생각보다 쉽지도 않다…ㅎㅎ)
+
+심심할때 오타 하나라도 고쳐서 PR을 한 번 날려보자!

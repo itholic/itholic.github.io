@@ -216,7 +216,7 @@ f(3)  # 5
 plus라는 함수를 하스켈에서 구현하면 다음과 같다.
 
 ```haskell
-Prelude> plus x y = x + y
+Prelude> let plus x y = x + y
 ```
 
 Currying 함수 구현이 끝났다!
@@ -243,7 +243,7 @@ def plus(x, y):
 진짜 그런지 확인해볼까?
 
 ```haskell
-Prelude> plus x y = x + y
+Prelude> let plus x y = x + y
 Prelude> plus(2 3)
 
 <interactive>:43:1: error:
@@ -274,7 +274,7 @@ plus(2) 까지만 실행한 결과는 특정 값이 아닌 또다른 함수이�
 그렇다면 파이썬 예제에서처럼 plus(2)로 반환된 함수를 변수에 넣고 사용해보자.
 
 ```haskell
-Prelude> f = plus(2)
+Prelude> let f = plus(2)
 Prelude> f(3)
 5
 Prelude>
@@ -314,6 +314,25 @@ f(3)
 Currying 함수 작성시에 복잡한 내부 로직을 따로 신경쓰지 않아도 된다는 부분이 더 핵심인 것 같다.
 
 다음엔 보다 복잡하고 실용적인 에제로 Currying의 장점, 함수형 프로그래밍의 장점을 더 알아봐야겠다.
+
+<br/>
+
++) 추가
+
+참고로, 하스켈에서도 다변수 함수를 만들수 있다.
+
+x, y를 동시에 입력받아 실행하는 다변수 함수는 다음과 같이 정의해주면 된다.
+
+```haskell
+plus (x, y) = x + y
+```
+
+다음과 같이 사용한다.
+
+```haskell
+Prelude> plus (2, 3)
+5
+```
 
 <br/>
 
