@@ -86,7 +86,7 @@ javascript: true
 # code: true
 kata: true
 go: true
-thinking: true
+# thinking: true
 # youtube: true
 
 # if you don't need "review", comment them out below
