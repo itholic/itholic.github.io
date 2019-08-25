@@ -67,7 +67,7 @@ n개의 음이 아닌 정수가 있습니다.
 
 이는 좀 더 시각적으로 다음과 같이 나타낼 수 있을 것이다.
 
-![](/Users/haejoonlee/Desktop/git_store/itholic.github.io/assets/images/2019/02/06/kata-target-number/graph.png)
+![](/assets/images/2019/02/06/kata-target-number/graph.png)
 
 그림이 좀 조잡하긴 하지만, 어느정도 의미전달은 됐을거라고 생각한다 (과연?)
 
