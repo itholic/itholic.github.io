@@ -36,8 +36,7 @@ def doubler(num):
 
     Example
     -------
-    >>> a = 10
-    >>> doubler(a)
+    >>> doubler(10)
     20
     """
     return num * 2
@@ -52,8 +51,7 @@ def doubler(num):
 ```python
 def doubler(num):
     """
-    >>> a = 10
-    >>> doubler(a)
+    >>> doubler(10)
     20
     """
     return num * 2
@@ -71,8 +69,7 @@ def doubler(num):
 
     Example
     -------
-    >>> a = 10
-    >>> doubler(a)
+    >>> doubler(10)
     20
     """
     return num * 2
@@ -84,6 +81,24 @@ doctest.testmod()
 doctest 모듈을 임포트하고, testmod() 메소드를 호출해주면 된다.
 
 스크립트를 실행했을때 아무런 출력이 없다면 doctest가 성공한 것이다.
+
+혹은 -v 옵션을 주어 다음과 같이 테스트 과정을 눈으로 확인할 수 있다.
+
+```shell
+$ python doctest_sample.py -v
+Trying:
+    doubler(10)
+Expecting:
+    20
+ok
+1 items had no tests:
+    __main__
+1 items passed all tests:
+   1 tests in __main__.doubler
+1 tests in 2 items.
+1 passed and 0 failed.
+Test passed.
+```
 
 만약 다음과 같이 잘못된 결과를 넣어주면 doctest에서 오류를 잡아준다.
 
@@ -97,8 +112,7 @@ def doubler(num):
 
     Example
     -------
-    >>> a = 10
-    >>> doubler(a)
+    >>> doubler(10)
     2000
     """
     return num * 2
@@ -107,16 +121,16 @@ def doubler(num):
 doctest.testmod()
 ```
 
-실제 실향 결과는 20이어야 하는데, 기대 결과를 2000으로 적어봤다.
+실제 실행 결과는 20이어야 하는데, 기대 결과를 2000으로 적어봤다.
 
 실행해보자.
 
 ```shell
 $ python doctest_sample.py
 **********************************************************************
-File "doctest_sample.py", line 11, in __main__.doubler
+File "doctest_sample.py", line 10, in __main__.doubler
 Failed example:
-    doubler(a)
+    doubler(10)
 Expected:
     2000
 Got:
