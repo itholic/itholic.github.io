@@ -12,6 +12,8 @@ sitemap:
 
 # 리눅스 기본 명령어
 
+<br/>
+
 리눅스를 사용할때 숨쉬듯(?) 타이핑하는 기본 명령어들을 정리해봤다.
 
 처음 리눅스를 접하는 사람들에게 조금이나마 도움이 되었으면 좋겠다.
@@ -37,8 +39,8 @@ sitemap:
 
 현재 작업중인 디렉토리 정보 출력
 
-```
-# pwd
+```shell
+$ pwd
 /home/itholic
 ```
 
@@ -52,14 +54,14 @@ sitemap:
 
 절대 경로와 상대 경로에 대해 더 자세히 알고싶다면 <a href="https://itholic.github.io/linux-cd/" target="_blank">해당 포스팅</a> 참조
 
-```
-# cd /home/itholic/mydir
-# pwd
+```shell
+$ cd /home/itholic/mydir
+$ pwd
 /home/itholic/mydir
 
 
-# cd ..
-# pwd
+$ cd ..
+$ pwd
 /home/itholic
 ```
 
@@ -69,23 +71,23 @@ sitemap:
 
 디렉토리 목록 확인
 
-```
-# ls
+```shell
+$ ls
 testfile1  testfile2  testfile3
 
 
-# ls -l
+$ ls -l
 total 0
 -rw-r--r-- 1 itholic 197121 0 11월  6 22:08 testfile1
 -rw-r--r-- 1 itholic 197121 0 11월  6 22:08 testfile2
 -rw-r--r-- 1 itholic 197121 0 11월  6 22:08 testfile3
 
 
-# ls -a
+$ ls -a
 ./  ../  testfile1  testfile2  testfile3
 
 
-# ls -al
+$ ls -al
 total 4
 drwxr-xr-x 1 itholic 197121 0 11월  6 22:08 ./
 drwxr-xr-x 1 itholic 197121 0 11월  6 22:08 ../
@@ -102,23 +104,22 @@ drwxr-xr-x 1 itholic 197121 0 11월  6 22:08 ../
 
 디렉토리를 복사할때는 -r 옵션을 주어야함
 
-```
-# ls
+```shell
+$ ls
 testdir/  testfile
 
 
-# cp testfile1 testfile_cp
-# ls
+$ cp testfile1 testfile_cp
+$ ls
 testdir/  testfile  testfile_cp
 
 
-# cp -r testdir testdir_cp
-# ls
+$ cp -r testdir testdir_cp
+$ ls
 testdir/  testdir_cp/  testfile  testfile_cp
 ```
 
 <br/>
-
 
 ### mv (move)
 
@@ -128,22 +129,22 @@ testdir/  testdir_cp/  testfile  testfile_cp
 
 cp와는 달리 디렉토리를 이동할때도 별다른 옵션이 필요 없다.
 
-```
-# ls
+```shell
+$ ls
 testdir/  testfile
 
 
-# mv testfile testfile_mv
-# ls
+$ mv testfile testfile_mv
+$ ls
 testdir/  testfile_mv
 
 
-# mv testfile_mv testdir/
-# ls
+$ mv testfile_mv testdir/
+$ ls
 testdir/
 
 
-# ls testdir/
+$ ls testdir/
 testfile
 ```
 
@@ -161,18 +162,18 @@ testfile
 
 mkdir -p 옵션 예제에서 실제로 하위디렉토리가 생성되었다는 것을 보여주기 위해 사용하였다.
 
-```
-# ls
+```shell
+$ ls
 testfile
 
 
-# mkdir testdir
-# ls
+$ mkdir testdir
+$ ls
 testdir/  testfile
 
 
-# mkdir -p a/b/c/d/e/
-# ls -R a/
+$ mkdir -p a/b/c/d/e/
+$ ls -R a/
 a/:
 b/
 
@@ -201,18 +202,18 @@ a/b/c/d/e:
 
 디렉토리를 삭제할 때에는 하위 디렉토리까지 모두 삭제되므로 유의하자.
 
-```
-# ls
+```shell
+$ ls
 testdir/  testfile1  testfile2
 
 
-# rm -f testfile1
-# ls
+$ rm -f testfile1
+$ ls
 testdir/  testfile2
 
 
-# rm -rf testdir/
-# ls
+$ rm -rf testdir/
+$ ls
 testfile2
 ```
 
@@ -228,20 +229,20 @@ testfile2
 
 파일이나 디렉토리가 존재하지 않으면 빈 파일을 만든다.
 
-```
-# ls -l
+```shell
+$ ls -l
 total 0
 -rw-r--r-- 1 itholic 197121 0 11월  6 22:08 testfile1
 
 
-# touch testfile1
-# ls -l
+$ touch testfile1
+$ ls -l
 total 0
 -rw-r--r-- 1 itholic 197121 0 11월  6 22:43 testfile1
 
 
-# touch testfile2
-# ls -l
+$ touch testfile2
+$ ls -l
 total 0
 -rw-r--r-- 1 itholic 197121 0 11월  6 22:43 testfile1
 -rw-r--r-- 1 itholic 197121 0 11월  6 22:44 testfile2
@@ -263,46 +264,46 @@ cat 명령은 활용 방법이 꽤나 다양하다.
 
 file1, file2, file3 파일에는 각각 간단하게 숫자 1, 2, 3 이 적혀있다.
 
-```
-# ls
+```shell
+$ ls
 file1  file2  file3
 
 
-# cat file1
+$ cat file1
 1
 
 
-# cat file2
+$ cat file2
 2
 
 
-# cat file3
+$ cat file3
 3
 
 
-# cat file1 file2 > file1_2
-# ls
+$ cat file1 file2 > file1_2
+$ ls
 file1  file1_2  file2  file3
 
 
-# cat file1_2
+$ cat file1_2
 1
 2
 
 
-# cat file1 >> file2
-# cat file2
+$ cat file1 >> file2
+$ cat file2
 2
 1
 
 
-# cat > file4
+$ cat > file4
 hello
 world
 (작성이 끝나면 ctrl +d 로 파일 저장)
 
 
-# cat file4
+$ cat file4
 hello
 world
 ```
@@ -315,8 +316,8 @@ world
 
 옵션을 지정하지 않으면 파일 상위 10줄을 보여준다.
 
-```
-# cat testfile
+```shell
+$ cat testfile
 1
 2
 3
@@ -334,13 +335,13 @@ world
 15
 
 
-# head -3 testfile
+$ head -3 testfile
 1
 2
 3
 
 
-# head testfile
+$ head testfile
 1
 2
 3
@@ -367,8 +368,8 @@ world
 
 주로 실시간으로 내용이 추가되는 로그파일을 모니터링할때 유용하게 사용한다.
 
-```
-# cat testfile
+```shell
+$ cat testfile
 1
 2
 3
@@ -386,13 +387,13 @@ world
 15
 
 
-# tail -3 testfile
+$ tail -3 testfile
 13
 14
 15
 
 
-# tail testfile
+$ tail testfile
 6
 7
 8
@@ -405,7 +406,7 @@ world
 15
 
 
-# tail -F testfile
+$ tail -F testfile
 6
 7
 8
@@ -435,17 +436,17 @@ world
 
 나같은 경우 주로 특정 확장자명을 찾기 위해 사용한다.
 
-```
-# ls
+```shell
+$ ls
 dir1/  dir3/  file1  file3  picture1.jpg  picture3.jpg
 dir2/  dir4/  file2  file4  picture2.jpg  picture4.jpg
 
 
-# find ./ -name 'file1'
+$ find ./ -name 'file1'
 ./file1
 
 
-# find ./ -name "*.jpg"
+$ find ./ -name "*.jpg"
 ./picture1.jpg
 ./picture2.jpg
 ./picture3.jpg
@@ -458,16 +459,16 @@ dir2/  dir4/  file2  file4  picture2.jpg  picture4.jpg
 
 exec 옵션을 사용해 다음과 같이 처리하면 된다.
 
-```
-# find ./ -name "*.jpg" -exec rm {} \;
-# ls
+```shell
+$ find ./ -name "*.jpg" -exec rm {} \;
+$ ls
 dir1/  dir2/  dir3/  dir4/  file1  file2  file3  file4
 ```
 
 그리고 다음과 같이 -type 옵션을 주면, 디렉토리나 파일만 지정해서 검색할수도 있다.
 
-```
-# find ./ -type d
+```shell
+$ find ./ -type d
 ./
 ./dir1
 ./dir2
@@ -475,7 +476,7 @@ dir1/  dir2/  dir3/  dir4/  file1  file2  file3  file4
 ./dir4
 
 
-# find ./ -type f
+$ find ./ -type f
 ./file1
 ./file2
 ./file3
@@ -487,8 +488,8 @@ dir1/  dir2/  dir3/  dir4/  file1  file2  file3  file4
 특정 디렉토리에 find 조건에 맞는 결과 값이 몇개 존재하는지 숫자로 간편히 알아볼 수 있다.
 
 
-```
-# find ./ -type f | wc -l
+```shell
+$ find ./ -type f | wc -l
 4
 ```
 
@@ -508,7 +509,7 @@ dir1/  dir2/  dir3/  dir4/  file1  file2  file3  file4
 
 txt 파일 안에 있는 'hi' 라는 문자열을 'hello'로 바꾸려면 다음과 같이 하면 된다.
 
-```
+```shell
 find ./ -name "*.txt" -exec sed -i 's/hi/hello/g' {} \;
 ```
 
@@ -516,7 +517,7 @@ find ./ -name "*.txt" -exec sed -i 's/hi/hello/g' {} \;
 
 다음 sed 명령어는 testfile1.txt 이라는 파일의 모든 'hi' 라는 문자열을 'hello'로 바꾸는 역할을 한다.
 
-```
+```shell
 sed -i 's/hi/hello/g' testfile1.txt
 ```
 
