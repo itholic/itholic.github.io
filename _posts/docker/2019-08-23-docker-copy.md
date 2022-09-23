@@ -26,7 +26,7 @@ docker cp 라는 명령어로 간단히 가능하다.
 
 <br/>
 
-"tmp-container"라는 컨테이너 내부에 "/root/data/test.md" 라는 파일이 있다고 하자.
+"tmp_container"라는 컨테이너 내부에 "/root/data/test.md" 라는 파일이 있다고 하자.
 
 이 파일을 로컬(호스트)의 "~/data/" 위치로 가져오려면 다음과 같이 하면 된다.
 
